@@ -1,0 +1,19 @@
+/* 
+calc()
+Helps to perfom mathematical operations + - * /
+Mix and match values
+*/
+*{
+    margin: 0;
+}
+.navbar {
+    background: blue;
+    height: 100px;
+    color: white;
+    font-size: 3rem;
+}
+.banner {
+    background: red;
+    min-height: calc(100vh - 100px); 
+    /* if we keep min-height only 100vh, scrolling will be available, if you don't want it and then calc will come to rescue */
+}

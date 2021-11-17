@@ -1,0 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Yesteryear&display=swap');
+
+/* font-size and font-family */
+body {
+    font-family: Helvetica;
+}
+h1 {
+    font-family: cursive;
+}
+
+/* 
+font-stack 
+This is used just for emergency, if the first given font family isn't supported by the browswer then second will come in handy, if even that is not supported then third font family will be applied and so on...
+
+generic family 
+serif, sans-serif, cursive, fantasy, monospace
+*/
+
+/*
+Google Fonts: https://fonts.google.com/
+Step 1: add links into head or acopy and paste the import url into the css file
+Step 2: add font family onto the elements
+*/
+h2 {
+    font-family: 'Yesteryear', cursive;
+}
+#googleFont {
+    font-family: 'Roboto', sans-serif;
+}

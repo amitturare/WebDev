@@ -1,0 +1,38 @@
+
+/* 
+line-height - controls the line spacing
+letter-spacing - controls the letter spacing
+word-spacing - controls the word spacing
+text-transform - helps to transform text into uppercase, lowercase, capitalize...
+text-decoration
+*/
+
+/* Test line-height on p with class one */
+.one {
+    line-height: 0.5em;
+}
+
+/* Test letter-spacing on p with class two */
+.two {
+    letter-spacing: 2px;
+    text-decoration: overline; /* overline - puts the line above the text */
+    line-height: 50px;
+}
+
+/* Test word-spacing on p with class three */
+.three {
+    word-spacing: 20px;
+    text-decoration: underline; /* nderline - puts the line below the text */
+}
+
+/* Test text-transform on heading h1 */
+h1 {
+    text-transform: uppercase;
+    text-decoration: line-through; /* line-through puts a line across the text */
+}
+
+/* Test text-decoration on the link */
+a {
+    font-size: 40px;
+    text-decoration: none; /* none - removes the line from the link */
+}

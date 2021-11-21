@@ -1,0 +1,17 @@
+/* 
+:root root element of the document - helps to work with relative units (rem, em)
+*/
+:root {
+    /* background: red; */
+    font-size: 150%;
+}
+h1 {
+    font-size: 3rem;
+
+}
+.abosulute {
+    font-size: 24px;
+}
+.responsive {
+    font-size: 1.5rem;
+}

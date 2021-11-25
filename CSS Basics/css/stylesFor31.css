@@ -1,0 +1,42 @@
+/* background-attachment 
+When set to `fixed` the background gets fixed and text moves (looks cool when scrolling)
+*/
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    min-height: 100vh;
+    color: green;
+    font-size: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.big-img {
+    background: url('../img/big.jpeg'); /* double dots means go to the previous folder */
+    background-size: cover;
+    background-position: center; /* center part of the image is shown */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+.small-img {
+    border: 5px solid red;
+    background: url('../img/photo.jpg'); 
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.folder-img {
+    background: url('../img/big.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat; /* round removes the cut photos */
+    background-position: center;
+    background-attachment: fixed;
+}

@@ -1,0 +1,25 @@
+/* 
+display: none;
+opacity and visiblity
+*/
+
+div {
+    background: blue;
+    margin: 10px;
+    color: white;
+}
+.none {
+    display: none; /* element doesn't display when display set to none, you can't even see using DevTools */
+}
+.opacity-1 {
+    opacity: 1; /* opacity is set to max */
+}
+.opacity-5 {
+    opacity: 0.5; /* opacity is set to middle that is 0.5  */
+}
+.opacity-0 {
+    opacity: 0; /* opacity is set to min, element will get whitened  */
+}
+.visibility {
+    visibility: hidden; /* works same like opcaity set to 0, you can check the element exists on the page using DevTools */
+}

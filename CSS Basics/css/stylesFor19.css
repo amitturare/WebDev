@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;1,700&family=Yesteryear&display=swap');
+
+/* 
+text-align (default is left)
+text-indent (only indents the first line)
+*/
+body {
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+}
+
+.main {
+    font-family: 'Yesteryear', cursive;
+}
+
+
+.one {
+    text-align: left;
+    text-indent: 50px;
+}
+.two {
+    text-align: left;
+    text-indent: 10em; /* 10 * 16 = 160px; bc 1em = 16px */ 
+}

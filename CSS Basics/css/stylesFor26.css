@@ -1,0 +1,30 @@
+/* 
+Block: top bottom margins are respected
+Inline: top bottom margins are not respected
+
+Mobile Navbar
+list-style-type: property
+descendent selectors
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+ul li { /* access all the lists present under the unordered list */
+    list-style-type: none; /* changes the style of the bullets */
+}
+ul li a { /* access all the links inside lists under the unordered list */
+    text-decoration: none; /* removes the underline present on the links */
+    text-transform: capitalize;
+    letter-spacing: 2px;
+    background: #222;
+    color: #f15025;
+    display: block; /* if kept inline, top and bottom margins and padding aren't respected and elements collapse */ 
+    padding: 10px 10px;
+    /* margin: 10px; */
+}

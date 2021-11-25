@@ -1,0 +1,16 @@
+.banner {
+    border: 5px solid red;
+    padding: 10px;
+}
+
+img {
+    float: left; /* wraps the text to the img and puts image to the left */ 
+}
+.two {
+    float: right; /* When these two properties are applied, the .one goes to the left, .two goes to the right and the text comes in the middle of both the images */
+}
+P {
+    clear: both; /* this makes the above change normal as earlier */ 
+}
+
+/* When used float to some direction, to make it normal, clear should also have the same direction */

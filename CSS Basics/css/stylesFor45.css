@@ -1,0 +1,32 @@
+/* 
+transition: change over time
+transition-property: - what kind of property u want to get transitions
+transition-duration: - how long the transitions should take place
+transition-delay: - make the transition waits for few secs
+
+shorthand - transition: <property> <duration> <delay>, <property> <duration> <delay> ...;
+if you want to add same duration and delay for all the propeties then -
+tranistion: all <duration> <delay>
+*/
+div {
+    width: 150px;
+    height: 150px;
+    display: inline-block;
+}
+
+.one {
+    background: red;
+}
+.two {
+    background: green;
+}
+.three:hover {
+    border-radius: 50%;
+    background: coral;
+}
+.three {
+    background: blue;
+    transition-property: background, border-radius;
+    transition-duration: 4s, 2s; /* 4s for background and 2s for border-radius */
+    transition-delay: 3s;
+}

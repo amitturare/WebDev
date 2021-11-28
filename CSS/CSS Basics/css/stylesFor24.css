@@ -1,0 +1,19 @@
+/* 
+Default Display Property
+Blopk: always starts a new line and takes full width
+Inline: doesn't start as a new line and only take up as much as content space
+*/
+
+/* To change the below block elements to inline, add display: inline; */
+.block {
+    background: blue;
+    color: white;
+    /* display: inline; */
+}
+
+/* To change the below inline elements to block, add display: block; */
+.inline {
+    background: red;
+    color: white;
+    /* display: block; */
+}

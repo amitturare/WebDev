@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Wrap</title>
+    <link rel="stylesheet" href="./styles/stylesFor3.css">
+    <style>
+      /* flex-wrap */
+      /* nowrap (default) wrap wrap-reverse */
+        .container {
+            display: flex;
+            /* flex-wrap: nowrap; */ /* doesn't wrap */ /* this is by default */
+            /* flex-wrap: wrap; */ /* wraps the content */
+            flex-wrap: wrap-reverse; /* reverse wraps the content */
+        }
+    </style>
+</head>
+<body>
+    <!-- parent = flex-container -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+    </div>
+</body>
+</html>

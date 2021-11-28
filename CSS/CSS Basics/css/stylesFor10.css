@@ -1,0 +1,16 @@
+/* Inheritance */
+body {
+    font-family: monospace;
+    line-height: 1.5em;
+    color: red;
+}
+div {
+    color: blue;
+    border: 3px solid black;
+}
+h2 {
+    color: green;
+}
+/* If u style the parent element (here, body) all the inside children elements will also get styled. Here both the paragraph elements will also get styled. */
+
+/* If u style the parent element and then style the children element specifically, children element will be given preference! */

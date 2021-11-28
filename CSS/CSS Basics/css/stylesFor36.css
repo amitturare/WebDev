@@ -1,0 +1,40 @@
+/* 
+Positions 
+static - this is by default
+abosulute - depends on the relative ancestor element. If no relative ancestor element, then depend on the body element as it is the first ancestor
+relative - changes the position of the element from its relative position
+fixed - used for navigation buttons or for navigations, makes the button fixed at one position even if you are scrolling up or down 
+*/
+
+div {
+    border: 3px solid red;
+    background: yellow;
+    margin-top: 40px;
+}
+
+.one {
+    background: blue;
+    position: relative;
+    bottom: 50px; /* this moves the element 50px to top from where it was sitting relatively */
+    right: 20rem; /* this moves the element 20rem to left from where it was sitting relatively */
+}
+.two {
+    background: green;
+    position: relative; /* Now the special one will depend on this .two and position itself accordingly, if this was not set to relative then the special one would depend on the body element and position itself */
+}
+.special {
+    background: salmon;
+    font-size: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+button {
+    background: red;
+    font-size: 40px;
+    color: white;
+    position: fixed; /* this wil make the button fixed at one position even if you are scrolling up or down */ 
+    top: 0;
+    right: 0;
+}

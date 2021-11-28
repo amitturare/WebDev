@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Flex Basis and Flex</title>
+    <link rel="stylesheet" href="./styles/stylesFor12.css" />
+    <style>
+        /* flex-basis is responsible for base value, it can rearrange the boxes anyway it wants to reach the provided size
+        AND
+        flex shortcut */
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .box {
+            /* flex-basis: 150px; */
+            flex: 0 0 calc(25% - 1rem); /* flex-grow flex-shrink flex-basis*/
+            /* flex-shrink set to 0 doesn't shrink the boxes */
+            /* in the above flex-basis - 1rem is done to have margin */
+        }
+    </style>
+    </hea>
+    <body>
+    <!--parent = flex-container  -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <!-- <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div> -->
+    </div>
+    <!-- <div class="container-1">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+    </div> -->
+    </body>
+</html>

@@ -1,0 +1,15 @@
+/* Class Selectors */
+.green {
+    color: green;
+}
+.red {
+    color: red;
+    background: black;
+} 
+
+#title {
+    font-size: 40px;
+}
+.lowercase {
+    text-transform: lowercase;
+}

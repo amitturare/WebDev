@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Order Property</title>
+    <link rel="stylesheet" href="./styles/stylesFor8.css" />
+    <style>
+        /* Order Property - all children have order: 0; by default*/
+        .container {
+            display: flex;
+            flex-direction: column;
+        }
+        .box-1 {
+            order: 1; /* this will place the box-1 ahead of the boxes having order: 0; */
+        }
+        .box-2 {
+            order: 2; /* this will place the box-2 ahead of the box having order: 1; */
+        }
+    </style>
+    </hea>
+    <body>
+    <!--parent = flex-container  -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <!-- <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div> -->
+    </div>
+    <!-- <div class="container-1">
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+    </div> -->
+    </body>
+</html>

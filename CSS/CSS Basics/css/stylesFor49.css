@@ -1,0 +1,58 @@
+/* 
+CSS Variables AKA Custom Properties
+hold a value in a varaible to use it later
+
+To save a value in a variable = 
+--varName: value;
+
+To use the variable =
+property: var(--varName);
+
+scope = 
+:root == global
+element == local
+Can work for any property
+*/
+
+/*
+.heading {
+    color: #f15025;
+}
+.text {
+    color: #32ff0e;
+}
+.main-text {
+    color: #1313fa;
+}
+.second-heading {
+    color: #f15025;
+}
+*/
+
+:root { /* Global Variables */
+    --priamryColor: #1313fa;
+    --secodnaryColor: #f15025;
+    --mainTransition: all  0.4s linear
+}
+.heading {
+    color: var(--priamryColor);
+}
+.second-heading {
+    color: var(--priamryColor);
+    transition: var(--mainTransition);
+}
+.second-heading:hover {
+    color: var(--secodnaryColor);
+}
+
+div { /* Below written are the Local Vairables which will work for only the children of the div*/
+    --priamryRed: red;
+}
+.main-Text {
+    color: var(--priamryRed);
+}
+
+/* Try to use the local variable out of the scope */
+.third-heading {
+    color: var(--primaryRed); /* Doesn't work! */
+}

@@ -1,0 +1,35 @@
+/* Adding background on a gradient */
+/* CSS Gradeint Generator: https://www.colorzilla.com/gradient-editor/ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+div {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-size: 60px;
+    color: rgb(253, 96, 46);
+}
+.banner {
+    background: url('../img/big.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+.header {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../img/big.jpeg') center/cover no-repeat fixed;
+}
+.colorzilla {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ff3232+0,207cca+99 */
+    background: #ff3232; /* Old browsers */
+    background: -moz-linear-gradient(-45deg,  #ff3232 0%, #207cca 99%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(-45deg,  #ff3232 0%,#207cca 99%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(135deg,  #ff3232 0%,#207cca 99%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ff3232', endColorstr='#207cca',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Align Content</title>
+    <link rel="stylesheet" href="./styles/stylesFor6.css" />
+    <style>
+        /* align-content */
+        /* 
+        stretch (by default) 
+        flex-end - moves the rows which are obtained after wraping to the bottom
+        flex-start - moves the rows which are obtained after wraping to the top
+        center - moves the rows which are obtained after wraping to the center
+        space-around - gives some equal space between the rows
+        space-between - same as above but the bottom and top most rows are sticked to the border
+        */
+        .container {
+        height: 300px;
+        height: 40vh;
+        display: flex;
+        flex-wrap: wrap;
+        /* align-content: stretch; */
+        /* align-content: flex-end; */
+        /* align-content: flex-start; */
+        /* align-content: center; */
+        align-content: space-around;
+        align-content: space-between;
+
+        }
+    </style>
+    </hea>
+    <body>
+    <!--parent = flex-container  -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+    </div>
+    </body>
+</html>

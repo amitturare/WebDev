@@ -1,0 +1,14 @@
+/* Element Selectors */
+
+body {
+    color: red;
+}
+h1, h2 {
+    color: blue;
+}
+
+/* The above written is called as CSS rule */
+/* type selector  {
+    (declaration block)
+    property: value;
+ } */

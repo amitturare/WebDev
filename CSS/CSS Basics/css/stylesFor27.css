@@ -1,0 +1,14 @@
+/* 
+inline-block 
+
+top bottom margin and padding are not at all respected for inline block elements, if you add margin and padding it will just add it to left right and not top bottom
+
+To solve the above issue, we can set display to inline-block
+*/
+
+a {
+    font-size: 60px;
+    background: red;
+    margin: 40px;
+    display: inline-block;
+}

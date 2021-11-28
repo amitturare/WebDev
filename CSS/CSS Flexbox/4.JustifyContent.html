@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Justify Content</title>
+    <link rel="stylesheet" href="./styles/stylesFor4.css">
+    <style>
+        /* justify-content helps with horizontal alignment */
+        /* flex-start (by default), flex-end, center */
+
+        /* evenly distributed */
+        /* space-between - adds equal spaces between each elements */
+        /* space-around - puts margins before and after each box */
+        /* space-evenly - even margins before and after each box */
+        .container {
+            display: flex;
+            /* justify-content: flex-start; */ /* this is by default */
+            justify-content: flex-end; /* shifts the boxes to the right hand side */
+            justify-content: center; /* centers all the boxes */
+            justify-content: space-around; 
+            justify-content: space-evenly; 
+        }
+    </style>
+</head>
+<body>
+    <!-- parent = flex-container -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <!-- <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div> -->
+    </div>
+</body>
+</html>

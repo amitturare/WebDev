@@ -1,0 +1,15 @@
+/* Descendant and Child Combinators */
+
+div h1 { /* Accesses all the h1(s) which are under the div */
+    color: red;
+}
+div > h1 { /* Accesses all the h1 which are direct children of div  */
+    color: blue;
+}
+
+.header h1 { /* Accesses all the h1(s) which are under the class header, also thsi is more specific one */
+    color: green;
+}
+.header > h1 { /* Accesses all the h1(s) which are direct children of the class header */
+    color: purple;
+}

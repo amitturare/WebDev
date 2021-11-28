@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Items</title>
+    <link rel="stylesheet" href="./styles/stylesFor5.css">
+    <style>
+        /* align-items helps with vertical alignment */
+        /* stretch (default) -  */
+        /* flex-start - aligns the boxes to the top of the container without stretching */
+        /* flex-end - aligns the boxes to the bottom of the container without stretching */
+        /* center - aligns the boxes to the center of the container without stretching */
+        /* baseline - works same like flex-start but then when specific box is getting some styles, all aligns themselves with the base line, whereas in flex-start opposite stuff happens*/
+        .container {
+            height: 50vh;
+            display: flex;
+            /* align-items: stretch; */ /* this is by default */
+            /* align-items: flex-start; */
+            /* align-items: flex-end; */
+            align-items: center; 
+            align-items: baseline; 
+        }
+    </style>
+</head>
+<body>
+    <!-- parent = flex-container -->
+    <div class="container">
+        <!-- children = flex-items -->
+        <div class="box box-1">1</div>
+        <div class="box box-2">2</div>
+        <div class="box box-3">3</div>
+        <div class="box box-4">4</div>
+        <div class="box box-5">5</div>
+        <!-- <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div>
+        <div class="box generic">G</div> -->
+    </div>
+</body>
+</html>

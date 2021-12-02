@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>auto-fill And auto-fit</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <style>
+        /* auto-fill = keeps creating */ 
+        /* auto-fit = only fits, it doesn't create more than necessary */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        }
+        .container-1 {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        }
+        /* difference of this will be visible when size of the page will be the largest */
+    </style>
+
+</head>
+<body>
+    <h1>auto-fit 👇</h1>
+    <!-- parent container -->
+    <div class="container">
+        <!-- children -->
+        <div class="cell cell-1">cell 1</div>
+        <div class="cell cell-2">cell 2</div>
+        <!-- <div class="cell cell-3">cell 3</div>
+        <div class="cell cell-4">cell 4</div>
+        <div class="cell cell-5">cell 5</div>
+        <div class="cell cell-6">cell 6</div> -->
+        <!-- <div class="cell">cell 7</div>
+        <div class="cell">cell 8</div>
+        <div class="cell">cell 9</div> -->
+    </div>
+
+    <h1>auto-fill 👇</h1>
+    <!-- parent container -->
+    <div class="container-1">
+        <!-- children -->
+        <div class="cell cell-1">cell 1</div>
+        <div class="cell cell-2">cell 2</div>
+        <!-- <div class="cell cell-3">cell 3</div>
+        <div class="cell cell-4">cell 4</div>
+        <div class="cell cell-5">cell 5</div>
+        <div class="cell cell-6">cell 6</div> -->
+        <!-- <div class="cell">cell 7</div>
+        <div class="cell">cell 8</div>
+        <div class="cell">cell 9</div> -->
+    </div>
+</body>
+</html>

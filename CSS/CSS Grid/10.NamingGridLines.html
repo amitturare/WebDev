@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naming Grid Lines</title>
+    <link rel="stylesheet" href="./styles/styles.css">
+    <style>
+        /* naming grid lines
+        in grid-template-columns and grid-template-columns between sizes u can add names like
+        grid-template-columns: [start] 100px [mid] 100px [end];
+        grid-template-rows: [start] 100px [mid] 100px [end];
+        */        
+        .container {
+            margin: 7rem;
+            display: grid;
+            min-height: 100vh;
+            grid-template-columns: [start] 100px [col-1-end] 100px [col-2-end] 100px [end]; 
+            grid-template-rows: [start] 100px [row-1-end] 100px [row-2-end] 100px 100px [end];
+            gap: 1rem; 
+        }
+        .cell-1 {
+            grid-column: start/3;
+            grid-row: start/row-2-end;
+        }
+    </style>
+
+</head>
+<body>
+    <!-- parent container -->
+    <div class="container">
+        <!-- children -->
+        <div class="cell cell-1">cell 1</div>
+        <div class="cell cell-2">cell 2</div>
+        <div class="cell cell-3">cell 3</div>
+        <div class="cell cell-4">cell 4</div>
+        <div class="cell cell-5">cell 5</div>
+        <div class="cell">cell 6</div>
+        <div class="cell">cell 7</div>
+        <div class="cell">cell 8</div>
+        <div class="cell">cell 9</div>
+    </div>
+</body>
+</html>

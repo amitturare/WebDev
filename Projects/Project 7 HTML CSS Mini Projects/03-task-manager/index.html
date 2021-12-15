@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Manager Starter</title>
+    <!-- normalize -->
+    <link rel="stylesheet" href="./normalize.css" />
+    <!-- font-awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <!-- main css -->
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <form class="form task-form">
+      <h4>Task Manager</h4>
+      <div class="form-control">
+        <input type="text" name="name" class="form-input task-input" placeholder="e.g. wash dishes">
+        <button class="btn submit-btn" type="submit">Submit</button>
+      </div>
+      <small class="form-alert text-success">There was an error</small>
+    </form>
+
+    <section class="task-container">
+      <p class="loading-text">Loading...</p>
+      <div class="tasks">
+        <!-- single task -->
+        <div class="single-task task-completed">
+          <h5><i class="far fa-check-circle"></i>
+            First name
+          </h5>
+          <div class="task-links">
+            <!-- edit link -->
+            <a href="task.html" class="edit-link">
+              <i class="fas fa-edit"></i>
+            </a>
+            <!-- delete button -->
+            <button type="button" class="delete-btn" data-id="123">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        <!-- end of single task -->
+        <!-- single task -->
+        <div class="single-task">
+          <h5><i class="far fa-check-circle"></i>
+            Second name
+          </h5>
+          <div class="task-links">
+            <!-- edit link -->
+            <a href="task.html" class="edit-link">
+              <i class="fas fa-edit"></i>
+            </a>
+            <!-- delete button -->
+            <button type="button" class="delete-btn" data-id="123">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div>
+        <!-- end of single task -->
+      </div>
+    </section>
+  </body>
+</html>

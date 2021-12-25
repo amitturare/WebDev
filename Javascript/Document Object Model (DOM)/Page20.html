@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>currentTarget VS target</title>
+    <style>
+        .blue {
+            background: blue;
+            color: white;
+        }
+        .btn {
+            display: block;
+            margin: 1rem;
+            border: none;
+            color: white;
+            background: red; 
+            font-size: 2rem;
+        }
+        a {
+            display: inline-block;
+            margin-top: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn">First Button</button>
+    <button class="btn">
+        Second <strong>Button <strong>More Nested</strong></strong>
+    </button>
+    <button class="btn">Third Button</button>
+    
+    <script src="./js/20.CurrentTargetVSTarget.js"></script>
+</body>
+
+</html>

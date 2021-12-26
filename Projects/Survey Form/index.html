@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <main>
+        <header>
+            <h1 id="title">survey form</h1>
+            <p id="description">Thank you for showing interest in us!</p>
+        </header>
+
+        <form id="survey-form">
+            <div class="form-div">
+                <label for="name" id="name-label">Name</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Enter your name" required>
+            </div>
+
+            <div class="form-div">
+                <label for="email" id="email-label">Email</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Enter your email" required>
+            </div>
+
+            <div class="form-div">
+                <label for="number" id="number-label">Number</label>
+                <input type="number" name="number" id="number" class="form-control" min=10 max=100 placeholder="Enter your phone number" required>
+            </div>
+
+            <div class="form-div">
+                <label for="role">Which option best describes your current role?</label>
+                <select id="dropdown" name="role" class="form-control" required>
+                    <option disabled selected value>Select current role</option>
+                    <option value="student">Student</option>
+                    <option value="job">Full Time Job</option>
+                    <option value="learner">Full Time Learner</option>
+                    <option value="preferNo">Prefer not to say</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+
+            <div class="form-div radio-div">
+                <p>Would you recommend our service to a friend?</p>
+                <label  class="radio"><input value="Definitely" type="radio" name="radio-choice" class="input-radio" checked>Definitely</label>
+                <label class="radio"><input value="Maybe" type="radio" name="radio-choice" class="input-radio">Maybe</label>
+                <label  class="radio"><input value="No" type="radio" name="radio-choice" class="input-radio">No</label>
+            </div>
+
+            <div class="form-div checkbox-div">
+                <p>
+                    What topics are you interested in?
+                    <span class="clue">(Check all that apply)</span>
+                </p>
+            
+                <label class="checkbox">
+                    <input name="prefer" value="front-end-projects" type="checkbox" class="input-checkbox" />
+                    Front-end Projects
+                </label>
+                <label class="checkbox">
+                    <input name="prefer" value="back-end-projects" type="checkbox" class="input-checkbox" />
+                    Back-end Projects
+                </label>
+                <label class="checkbox">
+                    <input name="prefer" value="full-stack" type="checkbox" class="input-checkbox" />
+                    Full Stack
+                </label>
+                <label class="checkbox">
+                    <input name="prefer" value="data-science" type="checkbox" class="input-checkbox" />
+                    Data Science
+                </label>
+                <label class="checkbox">
+                    <input name="prefer" value="machine-learning" type="checkbox" class="input-checkbox" />
+                    Machine Learning
+                </label>
+                <label class="checkbox">
+                    <input name="prefer" value="devops" type="checkbox" class="input-checkbox" />
+                    Devops
+                </label>
+            </div>
+
+            <div class="form-div">
+                <label for="textA">Feedback</label>
+                <textarea name="textA" id="form-textarea" placeholder="Enter your feedback here"></textarea>
+            </div>
+
+            <button type="submit" id="submit" class="btn submit-btn">Submit</button>
+
+        </form>
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <header id="header">
+        <!-- header-img -->
+        <div class="header-img">
+            <img src="./logo.svg" id="header-img" alt="logo">
+        </div>
+
+        <!-- nav -->
+        <nav id="nav-bar">
+            <ul class="nav-links">
+                <li><a href="#how-it-works" class="nav-link">How it works</a></li>
+                <li><a href="#newsletter" class="nav-link">About Us</a></li>
+                <li><a href="#newsletter" class="nav-link">Link3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="how-it-works" class="section">
+        <div class="video-container">
+            <h2>Find the best travel packages at Back Roads</h2>
+            <iframe id="video" width="640" height="385" src="https://www.youtube.com/embed/JN11JClxdA4" frameborder="0"
+                allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <!-- about section -->
+    <section class="section" id="newsletter">
+        <!-- Title -->
+        <div class="section-title">
+            <h2>To know more <span> about us</span></h2>
+        </div>
+        <!-- End of Title -->
+        <div class="section-center about-center">
+            <!-- img container -->
+            <article class="about-img-container">
+                <img src="./about.jpeg" class="about-photo" alt="Beach">
+            </article>
+            <!-- about-info -->
+            <article class="about-info">
+                <h2>Sign up for our newsletters</h2>
+                <form id="form" action="https://www.freecodecamp.com/email-submit">
+                    <input name="email" id="email" type="email" placeholder="Enter your email address" required />
+                    <input id="submit" type="submit" value="Get Started" class="btn" />
+                </form>
+            </article>
+        </div>
+    </section>
+
+</body>
+
+</html>

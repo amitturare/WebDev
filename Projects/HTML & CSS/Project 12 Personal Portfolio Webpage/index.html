@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Page</title>
+    <!-- font-awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav id="navbar">
+        <ul class="nav-links">
+            <li><a href="#welcome-section" class="nav-link">Home</a></li>
+            <li><a href="#projects" class="nav-link">Projects</a></li>
+            <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- welcome-section -->
+    <section id="welcome-section" class="welcome-section">
+        <div class="welcome-content">
+            <h3><code>Hello World!</code></h3>
+            <h1>I'm Amit Turare</h1>
+            <p>a web developer</p>
+        </div>
+    </section>
+
+    <!-- projects -->
+    <section id="projects" class="projects section section-center">
+        <div class="section-title about-title">
+            <h2>projects i have made</h2>
+            <div class="underline"></div>
+        </div>
+
+        <div class="projects-grid">
+            <a href="https://codepen.io/freeCodeCamp/full/zNqgVx" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/tribute.jpg"
+                    alt="project" />
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Tribute Page
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+
+            <a href="https://codepen.io/freeCodeCamp/full/qRZeGZ" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/random-quote-machine.png"
+                    alt="project" />
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Random Quote Machine
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+
+            <a href="https://codepen.io/freeCodeCamp/full/wgGVVX" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/calc.png" alt="project" />
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    JavaScript Calculator
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+
+            <a href="https://codepen.io/freeCodeCamp/full/mVEJag" target="_blank" class="project project-tile">
+                <img class="project-image" src="https://cdn.freecodecamp.org/testable-projects-fcc/images/map.jpg" alt="project" />
+                <p class="project-title">
+                    <span class="code">&lt;</span>
+                    Map Data Across the Globe
+                    <span class="code">&#47;&gt;</span>
+                </p>
+            </a>
+        </div>
+    </section>
+
+    <!-- footer -->
+    <footer class="footer">
+        <ul class="social-icons">
+            <!-- single item -->
+            <li>
+                <a href="https://www.twitter.com" id="profile-link" class="social-icon">
+                    <i class="fab fa-facebook"></i>
+                </a>
+            </li>
+            <!-- end of single item -->
+            <!-- single item -->
+            <li>
+                <a href="https://www.twitter.com" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <!-- end of single item -->
+            <!-- single item -->
+            <li>
+                <a href="https://www.github.com/amitturare" class="social-icon">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <!-- end of single item -->
+            <!-- single item -->
+            <li>
+                <a href="https://www.twitter.com" class="social-icon">
+                    <i class="fab fa-behance"></i>
+                </a>
+            </li>
+            <!-- end of single item -->
+            <!-- single item -->
+            <li>
+                <a href="https://www.twitter.com" class="social-icon">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <!-- end of single item -->
+        </ul>
+    
+        <p>&copy; <span id="date"></span> Amit Turare. All rights reserved.</p>
+    </footer>
+
+    <!-- app.js -->
+    <script src="app.js"></script>
+</body>
+</html>

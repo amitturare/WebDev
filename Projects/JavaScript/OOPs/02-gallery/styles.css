@@ -9,7 +9,7 @@ Fonts
 =============== 
 Variables
 ===============
-*/ 
+*/
 
 :root {
   /* dark shades of primary color*/
@@ -187,9 +187,8 @@ Modal
   background: rgb(0, 0, 0);
   transition: var(--transition);
   opacity: 0;
-  display: grid;
-  place-items: center;
   min-height: 100vh;
+  overflow: scroll;
 }
 .modal.open {
   opacity: 1;
@@ -199,14 +198,14 @@ Modal
   position: absolute;
   top: 1rem;
   right: 1rem;
-  font-size: 2rem;
+  font-size: 3rem;
   color: var(--clr-white);
   background: transparent;
   border-color: transparent;
   cursor: pointer;
 }
 .next-btn,
-.prev-btn { 
+.prev-btn {
   position: absolute;
   top: 10rem;
   right: -2.5rem;
@@ -233,6 +232,7 @@ Modal
   width: 80%;
   max-width: var(--max-width);
   margin: 0 auto;
+  margin-top: 10rem;
   position: relative;
 }
 .main-img {

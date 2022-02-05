@@ -1,0 +1,70 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins&display=swap");
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' version='1.1' xmlns:xlink='http://www.w3.org/1999/xlink' xmlns:svgjs='http://svgjs.com/svgjs' width='1920' height='1080' preserveAspectRatio='none' viewBox='0 0 1920 1080'%3e%3cg mask='url(%26quot%3b%23SvgjsMask1092%26quot%3b)' fill='none'%3e%3crect width='1920' height='1080' x='0' y='0' fill='url(%23SvgjsRadialGradient1093)'%3e%3c/rect%3e%3cpath d='M41.746%2c1185.544C92.713%2c1188.493%2c148.844%2c1176.526%2c174.354%2c1132.305C199.853%2c1088.103%2c179.562%2c1035.1%2c154.016%2c990.924C128.51%2c946.818%2c92.665%2c904.763%2c41.746%2c902.988C-11.68%2c901.126%2c-60.91%2c934.848%2c-84.953%2c982.594C-106.964%2c1026.305%2c-92.62%2c1076.843%2c-66.703%2c1118.357C-42.567%2c1157.019%2c-3.756%2c1182.911%2c41.746%2c1185.544' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M1416.289236635784 129.1455112345982L1243.4704919705057 165.87926939277926 1453.022994793965 301.96425589987655z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float1'%3e%3c/path%3e%3cpath d='M1344.5051138951724 767.8461615196949L1509.268367811851 878.9803795491657 1620.4025858413218 714.2171256324872 1455.639331924643 603.0829076030163z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M973.5235538509556 1013.4891272894938L1130.9747470024613 903.2406149446965 1020.7262346576639 745.7894217931909 863.2750415061582 856.0379341379883z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3cpath d='M1635.5524728229504 125.86049251701328L1547.8464592850419 412.7339365542871 1834.7199033223155 500.43995009219566 1922.4259168602243 213.56650605492186z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float2'%3e%3c/path%3e%3cpath d='M505.2636014587124 469.23633083716845L301.66248060245925 346.90043532477506 179.32658509006586 550.5015561810281 382.927705946319 672.8374516934216z' fill='rgba(28%2c 83%2c 142%2c 0.4)' class='triangle-float3'%3e%3c/path%3e%3c/g%3e%3cdefs%3e%3cmask id='SvgjsMask1092'%3e%3crect width='1920' height='1080' fill='white'%3e%3c/rect%3e%3c/mask%3e%3cradialGradient cx='50%25' cy='50%25' r='1101.45' gradientUnits='userSpaceOnUse' id='SvgjsRadialGradient1093'%3e%3cstop stop-color='rgba(67%2c 206%2c 162%2c 1)' offset='0'%3e%3c/stop%3e%3cstop stop-color='rgba(24%2c 90%2c 157%2c 1)' offset='1'%3e%3c/stop%3e%3c/radialGradient%3e%3cstyle%3e %40keyframes float1 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-10px%2c 0)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float1 %7b animation: float1 5s infinite%3b %7d %40keyframes float2 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(-5px%2c -5px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float2 %7b animation: float2 4s infinite%3b %7d %40keyframes float3 %7b 0%25%7btransform: translate(0%2c 0)%7d 50%25%7btransform: translate(0%2c -10px)%7d 100%25%7btransform: translate(0%2c 0)%7d %7d .triangle-float3 %7b animation: float3 6s infinite%3b %7d %3c/style%3e%3c/defs%3e%3c/svg%3e");
+
+    margin: 0;
+    height: 100vh;
+
+    display: grid;
+    place-items: center;
+}
+
+/* Button */
+.btn-container {
+    display: grid;
+    place-items: center;
+}
+.btn {
+    background-color: transparent;
+    border: 2px solid #222;
+    border-radius: 4px;
+    box-sizing: border-box;
+    color: #222;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Poppins", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1.5;
+    margin: 0 auto;
+    max-width: 200px;
+    min-height: 44px;
+    min-width: 10px;
+    outline: none;
+    overflow: hidden;
+    padding: 9px 20px 8px;
+    position: relative;
+    text-align: center;
+    text-transform: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    width: 100%;
+    transition: 0.25s;
+}
+.btn:hover,
+.btn:focus {
+    background-color: #222;
+    color: #fff;
+}
+.btn:active {
+    transform: translateY(3px);
+    box-shadow: 0 12px 12px 0 rgba(0, 0, 0, 0.3);
+}
+
+/* Title */
+.title {
+    margin-bottom: 0.75rem;
+}
+.title h1 {
+    text-align: center;
+    font-family: "Poppins", sans-serif;
+}

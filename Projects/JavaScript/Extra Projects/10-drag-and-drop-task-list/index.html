@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task List</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body>
+
+    <h1 class="main-title">Task List</h1>
+
+    <div class="drag-container">
+
+        <ul class="drag-list">
+            <!-- Backlog -->
+            <li class="drag-column backlog-column">
+                <span class="header">
+                    <h1>Backlog</h1>
+                </span>
+                <!-- Content -->
+                <div id="backlog-content" class="custom-scroll">
+                    <ul class="drag-item-list" id="backlog-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(0)">
+                        <!-- <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li> -->
+                    </ul>
+                </div>
+                <!-- Add Button -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(0)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(0)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+
+            <!-- Progress -->
+            <li class="drag-column progress-column">
+                <span class="header">
+                    <h1>Progress</h1>
+                </span>
+                <!-- Content -->
+                <div id="progress-content" class="custom-scroll">
+                    <ul class="drag-item-list" id="progress-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(1)">
+                        <!-- <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li> -->
+                    </ul>
+                </div>
+                <!-- Add Button -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(1)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(1)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+
+            <!-- Completed -->
+            <li class="drag-column complete-column">
+                <span class="header">
+                    <h1>Complete</h1>
+                </span>
+                <!-- Content -->
+                <div id="complete-content" class="custom-scroll">
+                    <ul class="drag-item-list" id="complete-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(2)">
+                        <!-- <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li> -->
+                    </ul>
+                </div>
+                <!-- Add Button -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(2)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(2)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+
+            <!-- Hold -->
+            <li class="drag-column on-hold-column">
+                <span class="header">
+                    <h1>On-Hold</h1>
+                </span>
+                <!-- Content -->
+                <div id="on-hold-content" class="custom-scroll">
+                    <ul class="drag-item-list" id="on-hold-list" ondrop="drop(event)" ondragover="allowDrop(event)" ondragenter="dragEnter(3)">
+                        <!-- <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Test</li>
+                        <li class="drag-item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa vitae incidunt quas sed magnam dolore unde assumenda? Voluptates, nostrum officiis temporibus eligendi harum facilis exercitationem animi provident minus qui perspiciatis reprehenderit nemo blanditiis distinctio saepe repellat doloribus, repellendus ab nisi corporis beatae libero numquam commodi maxime. Quas ullam assumenda nostrum molestias est expedita commodi mollitia laborum, ratione in tenetur. Sequi voluptates tempora similique voluptate, pariatur amet quibusdam quaerat sint cupiditate nisi voluptas dolores, quasi incidunt! Et vitae delectus ipsa minus vero nobis molestias unde cupiditate soluta, ea ratione possimus? Sunt esse est, qui, omnis eligendi alias asperiores recusandae quo vitae rem veritatis! Molestiae provident et sapiente, rem quaerat vero, dolor magnam fuga incidunt voluptatibus officiis modi eum labore quod adipisci minus nobis nisi dicta at? At, quo! Repudiandae ex non sint in maiores corporis aperiam quas pariatur, optio, odio deleniti! Sit eligendi, est vero pariatur explicabo praesentium ipsum dignissimos sunt quae? Voluptas quibusdam cum, natus facere ea in dolores! Voluptatibus eaque quibusdam possimus asperiores, error tempore, rerum repudiandae iste aliquid hic soluta necessitatibus nostrum iusto dignissimos ducimus et ut nam ipsa repellendus mollitia ratione eligendi expedita, magni eos. Sequi quibusdam quae unde adipisci. Eos quisquam molestiae repellendus neque aliquid ducimus obcaecati reprehenderit asperiores explicabo sint architecto deserunt, tempore dicta maxime, tempora pariatur nobis, enim molestias sit ullam! Distinctio vel expedita porro quisquam consequuntur hic saepe molestias fugit numquam, ratione enim cupiditate voluptatibus voluptates quia reiciendis, at incidunt modi, optio qui nostrum eveniet perspiciatis id obcaecati. Deserunt tenetur odio magni fugit eaque maxime laborum cupiditate delectus inventore unde harum, laboriosam temporibus commodi voluptas excepturi quos quidem corrupti vitae consequuntur consectetur numquam voluptates? Voluptas dignissimos, ex cupiditate nam voluptatem nemo cumque placeat, architecto recusandae consequuntur velit accusantium aliquam! Asperiores qui perspiciatis voluptatibus, cum, mollitia similique, praesentium reprehenderit earum eveniet optio nulla quis id quia impedit soluta itaque nisi vero quas quam! Facere sunt animi numquam quasi recusandae tempore sequi repellendus doloremque architecto maiores velit similique tempora sapiente perferendis inventore saepe, earum quisquam delectus sint rem molestiae eligendi officia? Nam maiores, accusantium odio sequi a, libero porro pariatur, ducimus officia numquam dolorem aspernatur fugiat vero praesentium consequatur nisi aliquid rem est repellendus earum quam id debitis voluptates! In expedita, officia esse soluta voluptatum assumenda molestias similique, cum quam alias, ipsa labore fugiat? Perspiciatis minima corporis asperiores a impedit minus, accusamus harum qui sit dolore facere blanditiis, tempora est recusandae quod labore expedita dignissimos exercitationem alias non nihil enim illum sapiente? Quaerat, temporibus. Quae minus voluptatem incidunt ducimus quos id mollitia sint earum dolor excepturi ex, similique atque provident voluptates debitis, sapiente doloribus soluta! Culpa voluptate quidem, debitis suscipit excepturi, dignissimos iusto soluta mollitia, facere sapiente nisi. Voluptatum, odio itaque nostrum libero alias esse eveniet magni perspiciatis earum tempore, sit quae quo cum ab labore mollitia dolores, reiciendis debitis saepe. Mollitia ullam exercitationem veniam ipsa totam eos quibusdam! Cumque velit nisi ullam recusandae incidunt placeat totam quidem quaerat assumenda. Architecto, sequi at eius rerum quisquam amet accusantium. Natus, ad? Maiores nisi recusandae odio numquam. Nulla aliquam, assumenda impedit iste exercitationem eaque itaque harum, quod labore vitae omnis. Expedita asperiores sed eveniet laboriosam beatae culpa consequuntur, aut temporibus? Impedit quos est quae doloribus consequatur perspiciatis. Reiciendis quidem minus quibusdam aut, culpa harum rerum perspiciatis cumque omnis, eveniet voluptates amet eius quos necessitatibus voluptatum fuga fugit! Voluptatem facere illo soluta, quas reiciendis dolorem numquam! Atque animi, non a labore quis unde nobis aliquam amet iure reiciendis necessitatibus ipsum eius tenetur. Repellendus, id. Neque laborum, nobis vero illo eum quidem quisquam excepturi omnis aperiam voluptates. Exercitationem quis alias ipsam amet, praesentium rem, tempore placeat enim, architecto dicta ducimus voluptates cumque mollitia deleniti voluptatem delectus eligendi ullam. Repellendus reprehenderit, possimus modi soluta earum vel? Molestiae, dolores itaque magnam ratione blanditiis tempora assumenda porro corrupti neque perspiciatis id amet suscipit aperiam cumque perferendis ducimus culpa architecto at dicta a accusantium voluptas maiores sit iste? Vel error cupiditate eveniet maxime sit quasi vero odit repudiandae voluptates, nesciunt explicabo, distinctio vitae! Ex libero molestias perspiciatis, quo unde tempore dolorum facere animi corrupti sint tempora incidunt deserunt culpa, amet totam sequi ab voluptates? Deleniti repudiandae accusamus distinctio quod consequuntur deserunt dolorum culpa error veniam provident aperiam, maiores odio, a quia atque facere praesentium possimus, ratione dolor velit? Laudantium, alias ex. Tempore iusto modi corrupti, laudantium voluptates placeat commodi dolores ducimus nesciunt atque non vel consectetur ipsam perferendis? Et officia ipsam asperiores ab blanditiis optio suscipit. Nemo vel maxime quos ipsa eos explicabo culpa unde tempore sit velit. Eligendi quaerat laudantium sequi ipsam et tempore veniam, error aliquam laboriosam asperiores nesciunt facere sunt. Architecto soluta, amet ea sit harum asperiores saepe. Eligendi ducimus quibusdam ab laudantium amet voluptatibus distinctio ullam sapiente maiores veniam sit, ad esse dignissimos nesciunt explicabo itaque reiciendis nisi animi numquam sed! Officia repellat atque enim voluptas nulla architecto similique fuga. Quis eius id eos quisquam inventore odit ipsa maiores, illum suscipit minus molestiae possimus excepturi! Temporibus natus, autem, ea voluptates commodi enim consectetur quos facilis modi provident quidem aliquam maxime dolore ipsam voluptas veniam recusandae mollitia explicabo ex porro eaque beatae tempore! Rem perferendis incidunt voluptatibus architecto tempore iste deserunt at aspernatur voluptatem amet facere praesentium, eius nisi itaque animi, corporis assumenda tenetur eligendi, magnam dignissimos illum ea laudantium autem. Iusto id, voluptatum reprehenderit voluptate voluptatem accusantium ratione tempora repellat temporibus in nulla, inventore minus, iure perspiciatis impedit repellendus consectetur tenetur. Exercitationem vitae, ratione cum commodi, cupiditate autem a praesentium ullam aut quaerat dolore. Est veritatis quia, doloribus nesciunt quam nemo ad suscipit quae ipsam? Ratione id esse consequuntur incidunt possimus? Fugiat possimus consequatur ipsa ducimus architecto? Harum aliquam maxime qui sint repellendus! Laboriosam voluptas earum vitae perspiciatis molestias odit adipisci animi aperiam inventore quaerat, corporis mollitia possimus quia assumenda voluptatem ipsam recusandae minima asperiores ratione odio vero totam doloremque consectetur accusantium. Veritatis, ipsa perspiciatis! Ut pariatur aperiam cupiditate amet quidem, delectus eius eos, asperiores distinctio eaque illo. Velit iste nesciunt repellendus incidunt sint placeat aut corporis explicabo voluptates eius earum, sequi itaque saepe id quia, nobis ad ea.</li> -->
+                        
+                    </ul>
+                </div>
+                <!-- Add Button -->
+                <div class="add-btn-group">
+                    <div class="add-btn" onclick="showInputBox(3)">
+                        <span class="plus-sign">+</span>
+                        <span>Add Item</span>
+                    </div>
+                    <div class="add-btn solid" onclick="hideInputBox(3)">
+                        <span>Save Item</span>
+                    </div>
+                </div>
+                <div class="add-container">
+                    <div class="add-item" contenteditable="true"></div>
+                </div>
+            </li>
+        </ul>
+
+    </div>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

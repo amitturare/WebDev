@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <header><i class="bx bx-left-arrow-alt back-btn" hidden></i>Weather Web App</header>
+
+        <section class="input-part">
+            <p class="info-text">Enter a valid location</p>
+            <form id="form">
+                <input type="text" class="search" placeholder="Enter your location" spellcheck="false" required>
+            </form>
+            <div class="separator"></div>
+            <button>Get Device Location</button>
+        </section>
+
+        <section class="weather-part" hidden>
+            <img class="icon" src="icons/cloud.svg" alt="icon">
+            <div class="temp">
+                <span class="number">13</span>
+                <span class="deg">°</span>C
+            </div>
+            <div class="weather">Broken Clouds</div>
+            <div class="location"><i class="bx bx-map"></i>
+                <span class="location-text">Kathmandu, Nepal</span>
+            </div>
+        </section>
+    </div>
+
+    
+
+    <main id="main"></main>
+
+    <!-- Script -->
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: linear-gradient(300deg, #ced1d6, #bfc0c0);
+    font-family: "Poppins", sans-serif;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    margin: 0;
+    min-height: 100vh;
+}
+
+.wrapper {
+    width: 400px;
+    border-radius: 10px;
+    background: #fff;
+}
+.wrapper header {
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-bottom: 2px solid #bfbfbf;
+
+    display: flex;
+    align-items: center;
+}
+header i {
+    cursor: pointer;
+    font-size: 2rem;
+    margin-right: 0.75rem;
+    visibility: hidden;
+}
+.input-part {
+    /* display: none; */
+    margin: 2.5rem;
+    margin-top: 1rem;
+}
+.info-text {
+    display: none;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem 0.75rem;
+    border-radius: 7px;
+}
+.error {
+    display: block;
+    color: #721c24;
+    background: #f8d7da;
+    border: 2px solid #f5c6cb;
+}
+.pending {
+    display: block;
+    color: #0c5460;
+    background: #d1ecf1;
+    border: 2px solid #bee5eb;
+}
+button,
+input {
+    width: 100%;
+    height: 55px;
+    border: none;
+    border-radius: 7px;
+}
+input:focus {
+    outline: none;
+}
+input {
+    text-align: center;
+    margin: 0;
+    border: 2px solid #bfbfbf;
+    width: 98%;
+}
+input::-webkit-input-placeholder {
+    font-family: "Poppins", sans-serif;
+}
+input::-moz-placeholder {
+    font-family: "Poppins", sans-serif;
+}
+input:-ms-input-placeholder {
+    font-family: "Poppins", sans-serif;
+}
+input::-ms-input-placeholder {
+    font-family: "Poppins", sans-serif;
+}
+input::placeholder {
+    font-family: "Poppins", sans-serif;
+}
+button {
+    font-family: "Poppins", sans-serif;
+    background: #ced1d6;
+    cursor: pointer;
+}
+.separator {
+    width: 100%;
+    background: #bfbfbf;
+    height: 2px;
+    margin: 1.5rem 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.separator::before {
+    content: "OR";
+    background-color: #fff;
+    padding: 0 1rem;
+}
+
+.weather-part {
+    margin: 2rem 0;
+    margin-top: 1.5rem;
+    display: none;
+    place-items: center;
+}
+.weather-part img {
+    max-width: 125px;
+}
+.weather-part .temp {
+    display: flex;
+    font-size: 72px;
+    font-weight: bold;
+}
+.temp .number {
+    font-weight: 600;
+}
+.deg {
+    font-size: 40px;
+    margin: 10px 5px 0 0;
+    display: block;
+}
+.location {
+    display: flex;
+    align-items: center;
+    font-size: 21px;
+    margin-bottom: 2rem;
+}
+.location i {
+    font-size: 21px;
+    margin-right: 5px;
+}

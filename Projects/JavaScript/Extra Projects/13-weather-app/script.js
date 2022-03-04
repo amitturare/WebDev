@@ -11,79 +11,105 @@ const getElements = (selection) => {
     }
 };
 
-// ==== Selections ====
-const wrapper = getElements(".wrapper");
+// Import the icons function
+import { setIcon } from "./icons.js";
+
+// ==== Selections ==== //
 const form = getElements("#form");
 const search = getElements(".search");
-const inputPart = getElements(".input-part");
-const backBtn = getElements(".back-btn");
-const weatherPart = getElements(".weather-part");
+const locationBtn = getElements(".location-btn");
+const content = getElements(".content");
 
-const iconEl = getElements(".icon");
-const numberEl = getElements(".number");
-const weatherEl = getElements(".weather");
-const locationEl = getElements(".location-text");
+const wIconEl = getElements(".weather-icon");
+const wtTextEl = getElements(".weather-text");
+const wTempEl = getElements(".main .number");
+const wLocationEl = getElements(".location-text");
+const mapLocationIcon = getElements(".fa-map-location-dot");
+
+// Extra Details
+const feelsNum = getElements(".feels .number");
+const humidityNum = getElements(".humidity .number");
+const windNum = getElements(".wind-speed .number");
+const precipitationNum = getElements(".precipitation .number");
 
 let backBtnHidden = false;
 
-// https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apikey}
-
+// ==== API ==== //
 const apiKey = "95b6fc9a2ecd4b5581b31840222502";
-
-const URL = (city) =>
-    `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${city}&aqi=no`;
-
-async function getWeatherByLocation(city) {
-    const response = await fetch(URL(city));
+async function fetchData(URL) {
+    const response = await fetch(URL);
     const data = await response.json();
 
     updateDOM(data);
 }
 
-// ==== Update the DOM ====
+// ==== Update the DOM ==== //
 function updateDOM(data) {
     const temp = data.current.temp_c;
-    const location = data.location.name;
-    const country = data.location.country;
-    const text = data.current.condition.text;
-    const icon = data.current.condition.icon;
+    const { name, country, localtime } = data.location;
+    const { text, code } = data.current.condition;
+    const { wind_kph, humidity, precip_mm, feelslike_c } = data.current;
 
-    // Hide input-part
-    inputPart.style.display = "none";
+    let nameCountry = `${name}, ${country}`;
+    let hours = localtime.substr(localtime.length - 5, 2);
 
-    // Show weather-part
-    weatherPart.style.display = "grid";
+    if (nameCountry.length > 22) {
+        mapLocationIcon.classList.add("long");
+        content.style.padding = "3.10rem 1rem";
+    } else {
+        mapLocationIcon.classList.remove("long");
+        content.style.padding = "5rem 1rem";
+    }
+    // SetIcon
+    setIcon(code, hours, wIconEl);
 
-    // Update Dom
-    iconEl.src = icon;
-    numberEl.textContent = temp;
-    weatherEl.textContent = text;
-    locationEl.textContent = `${location}, ${country}`;
+    // Clear the search
+    search.value = "";
 
-    // show back-btn
-    backBtn.style.visibility = "visible";
+    // Update DOM
+    wTempEl.textContent = temp;
+    wtTextEl.textContent = text;
+    wLocationEl.textContent = nameCountry;
+    feelsNum.textContent = feelslike_c;
+    humidityNum.textContent = humidity;
+    windNum.textContent = wind_kph;
+    precipitationNum.textContent = precip_mm;
+
+    console.log();
 }
 
-// ==== Event Listeners ====
+// ==== Geolocation API ==== //
+// onSuccess
+function onSuccess(data) {
+    const { latitude, longitude } = data.coords;
+
+    // Fetch
+    const URL = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${latitude},${longitude}&aqi=no`;
+    fetchData(URL);
+}
+
+// onError
+function onError(err) {
+    alert(err.message);
+}
+
+// ==== Event Listeners ==== //
 form.addEventListener("submit", (e) => {
     e.preventDefault();
 
     const city = search.value;
+    const URL = `https://api.weatherapi.com/v1/current.json?key=${apiKey}&q=${search.value}&aqi=no`;
 
     if (city) {
-        getWeatherByLocation(city);
+        fetchData(URL);
     }
 });
 
-backBtn.addEventListener("click", () => {
-    // Show input-part
-    inputPart.style.display = "block";
-
-    // Hide weather-part
-    weatherPart.style.display = "none";
-    // Clear search box
-    search.value = "";
-
-    // Hide backBtn
-    backBtn.style.visibility = "hidden";
+locationBtn.addEventListener("click", () => {
+    // Check if the browser supports geolocation api or not
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(onSuccess, onError);
+    } else {
+        alert("Your browser does not support Geolocation API.");
+    }
 });

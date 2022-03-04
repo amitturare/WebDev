@@ -1,5 +1,5 @@
 /* Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
 
 html {
     box-sizing: border-box;
@@ -8,143 +8,213 @@ html {
 }
 
 body {
-    background: linear-gradient(300deg, #ced1d6, #bfc0c0);
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #48c6ef 0%, #6f86d6 100%);
     font-family: "Poppins", sans-serif;
 
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+
+    width: 360px;
+    height: 660px;
+    border-radius: 10px;
+    margin-top: -2rem;
+}
+
+/* 
+========
+Input Part 
+========
+*/
+.input-part {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-icon {
+    position: relative;
+    top: 3.5px;
+}
+.input-box {
+    width: 100%;
+}
+.search {
+    width: 102%;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: none;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.search:focus {
+    outline: none;
+}
+.search::-webkit-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::-moz-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search:-ms-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::-ms-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::-webkit-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.icon {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.767);
+}
+.location-btn {
+    background: none;
+    border: none;
+    position: relative;
+    right: 5px;
+    top: 1.5px;
+}
+.location-btn:focus {
+    outline: none;
+}
+.fa-location-crosshairs {
+    font-size: 1.25rem;
+}
+.location-btn:hover .fa-location-crosshairs {
+    color: #5ba7e3;
+    cursor: pointer;
+}
+
+/* 
+========
+Content
+========
+*/
+.content {
+    padding: 5rem 1rem;
+    padding-bottom: 0;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    margin: 0;
-    min-height: 100vh;
 }
-
-.wrapper {
-    width: 400px;
-    border-radius: 10px;
-    background: #fff;
+.content img {
+    transform: scale(3.5);
+    margin-bottom: 2rem;
 }
-.wrapper header {
-    font-size: 1.5rem;
+.content .temp {
+    display: flex;
+    font-size: 72px;
     font-weight: 500;
-    padding: 1rem;
-    border-bottom: 2px solid #bfbfbf;
-
+}
+.content .temp .numb {
+    font-weight: 600;
+}
+.content .temp .deg {
+    display: block;
+    font-size: 40px;
+    margin: 5px 5px 0 0;
+}
+.content .location {
     display: flex;
     align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
 }
-header i {
-    cursor: pointer;
-    font-size: 2rem;
-    margin-right: 0.75rem;
-    visibility: hidden;
+.location i {
+    font-size: 1.3rem;
+    margin-right: 8px;
 }
-.input-part {
-    /* display: none; */
-    margin: 2.5rem;
-    margin-top: 1rem;
+.long {
+    position: relative;
+    bottom: 16px;
+    left: 22px;
 }
-.info-text {
-    display: none;
-    font-size: 1rem;
+.location-text {
     text-align: center;
-    padding: 1rem 0.75rem;
-    border-radius: 7px;
 }
-.error {
-    display: block;
-    color: #721c24;
-    background: #f8d7da;
-    border: 2px solid #f5c6cb;
-}
-.pending {
-    display: block;
-    color: #0c5460;
-    background: #d1ecf1;
-    border: 2px solid #bee5eb;
-}
-button,
-input {
-    width: 100%;
-    height: 55px;
-    border: none;
-    border-radius: 7px;
-}
-input:focus {
-    outline: none;
-}
-input {
-    text-align: center;
-    margin: 0;
-    border: 2px solid #bfbfbf;
-    width: 98%;
-}
-input::-webkit-input-placeholder {
-    font-family: "Poppins", sans-serif;
-}
-input::-moz-placeholder {
-    font-family: "Poppins", sans-serif;
-}
-input:-ms-input-placeholder {
-    font-family: "Poppins", sans-serif;
-}
-input::-ms-input-placeholder {
-    font-family: "Poppins", sans-serif;
-}
-input::placeholder {
-    font-family: "Poppins", sans-serif;
-}
-button {
-    font-family: "Poppins", sans-serif;
-    background: #ced1d6;
-    cursor: pointer;
-}
-.separator {
-    width: 100%;
-    background: #bfbfbf;
-    height: 2px;
-    margin: 1.5rem 0;
 
+.extra-details {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    margin-top: -5rem;
+    padding: 1rem;
+    width: 99%;
+    height: 10rem;
+
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+
+    position: relative;
+    top: 91px;
+    border-radius: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.extra-details article {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.separator::before {
-    content: "OR";
-    background-color: #fff;
-    padding: 0 1rem;
+article i {
+    font-size: 30px;
+    margin-right: 10px;
 }
-
-.weather-part {
-    margin: 2rem 0;
-    margin-top: 1.5rem;
-    display: none;
-    place-items: center;
+.details .temp,
+.humidity span {
+    font-size: 1rem;
+    font-weight: 500;
 }
-.weather-part img {
-    max-width: 125px;
+.humidity .unit {
+    position: relative;
+    right: 3px;
 }
-.weather-part .temp {
-    display: flex;
-    font-size: 72px;
-    font-weight: bold;
+.details .temp .deg {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0 2px 0 1px;
 }
-.temp .number {
-    font-weight: 600;
+.details p {
+    font-size: 0.75rem;
+    margin: 0;
 }
-.deg {
-    font-size: 40px;
-    margin: 10px 5px 0 0;
-    display: block;
+.feels {
+    position: relative;
+    right: 15px;
 }
-.location {
-    display: flex;
-    align-items: center;
-    font-size: 21px;
-    margin-bottom: 2rem;
-}
-.location i {
-    font-size: 21px;
-    margin-right: 5px;
+.humidity {
+    position: relative;
+    right: 15px;
 }

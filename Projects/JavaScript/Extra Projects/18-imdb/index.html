@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Center</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!-- Font-Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- For Mobile Screen -->
+    <div class="alert">
+        <h3>Please use this site on devices having larger screens <i class="fa-solid fa-laptop"></i></h3>
+    </div>
+
+    <!-- Modal -->
+    <dialog class="modal-container">
+        <!-- <div class="left-half"></div>
+        <div class="right-half"></div> -->
+        <div class="info">
+            <div class="header">
+                <img class="poster" src="https://image.tmdb.org/t/p/w500/1g0dhYtq4irTY1GPXvft6k4YLjm.jpg"/>
+                <h1>Spider-Man: No Way Home</h1>
+                <h4>2021</h4>
+                <span class="rating">9.2</span>
+                <span class="minutes">133 min</span>
+                <p class="type">Action</p>
+            </div>
+            <div class="description">
+                <p class="text">
+                    Peter Parker is unmasked and no longer able to separate his normal life from the high-stakes of being a super-hero. When he asks for help from Doctor Strange the stakes become even more dangerous, forcing him to discover what it truly means to be Spider-Man.
+                </p>
+            </div>
+        </div>
+        <a class="btn" id="know-more-btn" target="_blank">Know More</a>
+    </dialog>
+
+    <main>
+        <!-- Nav -->
+        <nav>
+            <div id="logo" class="logo">
+                <h1>amitole video</h1>
+                <img src="./logo.png" width="100" alt="">
+            </div>
+            <ul class="nav-list">
+                <li><a href="#" class="nav-item highlighted" id="home">Home</a></li>
+                <li><a href="#" class="nav-item" id="trending">Trending</a></li>
+                <li><a href="#" class="nav-item" id="movies">Movies</a></li>
+                <li><a href="#" class="nav-item" id="shows">Shows</a></li>
+            </ul>
+            <form id="search-box">
+                <div class="search-logo">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <input type="text" id="search" autocomplete="off" required placeholder="Search">
+            </form>
+        </nav>
+
+        <!-- Container -->
+        <section class="container" id="container">
+            <div class="carousel">
+                <button type="button" class="carousel-btns prev-img" data-type="prev">
+                    <i class="fa-solid fa-angle-left"></i>
+                </button>
+                <button type="button" class="carousel-btns next-img" data-type="next">
+                    <i class="fa-solid fa-angle-right"></i>
+                </button>
+                <ul>
+                    <li class="slide" data-active>
+                        <img src="./img1.jpg" alt="Trending #1">
+                    </li>
+                    <li class="slide">
+                        <img src="./img2.jpg" alt="Trending #2">
+                    </li>
+                    <li class="slide">
+                        <img src="./img3.jpg" alt="Trending #3">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            <button type="button" class="page" id="prev"><i class="fa-solid fa-angle-left"></i></button>
+            <span class="current-page page" id="current-page"></span>
+            <button type="button" class="page" id="next"><i class="fa-solid fa-angle-right"></i></button>
+        </div>
+    </main>
+
+    <!-- Script -->
+    <script type="module" src="./js/script.js"></script>
+    <script type="module" src="./js/modal.js"></script>
+</body>
+</html>

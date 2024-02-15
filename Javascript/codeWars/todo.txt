@@ -1,0 +1,42 @@
+1. Find the odd int https://www.codewars.com/kata/54da5a58ea159efa38000836/train/javascript
+2. Array Product Sans https://www.codewars.com/kata/5b3e609cd58499284100007a/train/javascript
+3. Complete cube as sums https://www.codewars.com/kata/58af1bb7ac7e31b192000020
+4. Two cube sums https://www.codewars.com/kata/55fd4919ce2a1d7c0d0000f3
+5. Count and group characters in a string https://www.codewars.com/kata/543e8390386034b63b001f31
+6. Address book by slate https://www.codewars.com/kata/59d0ee709f0cbcf65400003b
+7. Find the mine https://www.codewars.com/kata/528d9adf0e03778b9e00067e
+8. Sum of odd cubed numbers https://www.codewars.com/kata/580dda86c40fa6c45f00028a
+9. Length of missing array https://www.codewars.com/kata/57b6f5aadb5b3d0ae3000611
+10. Twice Linear https://www.codewars.com/kata/5672682212c8ecf83e000050
+11. What's perfect power? https://www.codewars.com/kata/54d4c8b08776e4ad92000835
+12. int32 to iPv4 https://www.codewars.com/kata/52e88b39ffb6ac53a400022e
+13. Count the divisible numbers https://www.codewars.com/kata/55a5c82cd8e9baa49000004c
+
+
+2. 
+// the input is an array of Number-s
+// the output must be an array of BigInt-s
+
+function productSansN(numbers) {
+	let numberOfZeros = 0;
+	numbers.forEach((n) => {
+		if (n === 0) {
+			numberOfZeros++;
+		}
+	});
+
+	const totalProduct = numbers.reduce((product, currValue) => {
+		product = BigInt(product);
+		currValue = BigInt(currValue);
+		return product * currValue;
+	});
+
+	if (!numberOfZeros) {
+		return numbers.map((n) => totalProduct / BigInt(n));
+	}
+	if (numberOfZeros == 1) {
+		const productWithoutZero = numbers.filter((n) => n !== 0).reduce((p, c) => p * c);
+		return numbers.map((n) => (n ? BigInt(0) : BigInt(productWithoutZero)));
+	}
+	return numbers.fill(BigInt(0));
+}

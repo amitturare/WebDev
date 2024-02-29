@@ -2,9 +2,13 @@
 
 function productSansN(numbers) {
 	let numberOfZeros = 0;
+	let negativeCount = 0;
+
 	numbers.forEach((n) => {
 		if (n === 0) {
 			numberOfZeros++;
+		} else if (n < 0) {
+			negativeCount++;
 		}
 	});
 
@@ -12,16 +16,23 @@ function productSansN(numbers) {
 		product = BigInt(product);
 		currValue = BigInt(currValue);
 		return product * currValue;
-	});
+	}, 1n);
 
 	if (!numberOfZeros) {
 		return numbers.map((n) => totalProduct / BigInt(n));
 	}
 	if (numberOfZeros == 1) {
-		const productWithoutZero = numbers.filter((n) => n !== 0).reduce((p, c) => p * c);
-		return numbers.map((n) => (n ? BigInt(0) : BigInt(productWithoutZero)));
+		const productWithoutZero = numbers.filter((n) => n !== 0).reduce((p, c) => p * BigInt(c), 1n);
+		return numbers.map((n) => (n ? 0n : BigInt(productWithoutZero)));
 	}
-	return numbers.fill(BigInt(0));
+
+	if (negativeCount % 2 === 0) {
+		// Even number of negative numbers
+		return numbers.map((n) => (n === 0 ? totalProduct : totalProduct / BigInt(n)));
+	} else {
+		// Odd number of negative numbers
+		return numbers.map((n) => (n === 0 ? 0n : n < 0 ? totalProduct / BigInt(n) : 0n));
+	}
 }
 
 // console.log(productSansN([1, 1, 1])); // [1n, 1n, 1n]

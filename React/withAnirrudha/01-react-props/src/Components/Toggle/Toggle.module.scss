@@ -1,0 +1,18 @@
+@mixin Toggle($bg-color) {
+	padding: 1rem;
+	margin: 1rem 0;
+	max-width: 200px;
+	border: thin solid #ccc;
+
+	display: flex;
+	justify-content: space-between;
+
+	background-color: $bg-color;
+}
+
+.ToggleOn {
+	@include Toggle(green);
+}
+.ToggleOff {
+	@include Toggle(red);
+}

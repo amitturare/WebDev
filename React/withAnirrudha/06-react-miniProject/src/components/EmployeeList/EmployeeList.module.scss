@@ -1,0 +1,11 @@
+.employeeList {
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+
+	.employeeItem {
+		padding: 0.5rem 1rem;
+		text-align: center;
+		border: thin solid #e1e1e1;
+	}
+}

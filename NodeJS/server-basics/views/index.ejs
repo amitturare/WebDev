@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('./partials/head') %>
+
+    <body>
+        <%- include('./partials/nav') %>
+
+        <div class="blogs content">
+            <div>
+                <% if (key) { %>
+                <h2><%= title %> For "<%= key %>"</h2>
+                <% } else { %>
+                <h2><%= title %></h2>
+                <% } %>
+
+                <input type="search" id="search" name="search" />
+            </div>
+
+            <% if (blogs.length) { %> <% blogs.forEach(blog => { %>
+            <a class="single" href="/blogs/<%= blog.id %>">
+                <h3 class="title"><%= blog.title%></h3>
+                <p class="snippet"><%= blog.snippet%></p>
+            </a>
+
+            <% }) %> <% } else { %>
+            <p>There are no blogs to display!</p>
+            <% } %>
+        </div>
+
+        <%- include('./partials/footer') %>
+
+        <script>
+            const searchField = document.querySelector("#search");
+
+            searchField.addEventListener("keyup", (e) => {
+                if (e.keyCode === 13) {
+                    if (!searchField.value) return;
+
+                    window.location.href = `/blogs?key=${searchField.value}`;
+                }
+            });
+        </script>
+    </body>
+</html>

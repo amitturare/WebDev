@@ -1,0 +1,480 @@
+/*css for sprites and nouislider*/
+
+
+/*nouislider*/
+
+
+/* Functional styling;
+ * These styles are required for noUiSlider to function.
+ * You don't need to change these rules to apply your design.
+ */
+.noUi-target,
+.noUi-target * {
+  -webkit-touch-callout: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-user-select: none;
+  -ms-touch-action: none;
+  touch-action: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  outline:none;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.noUi-target {
+  position: relative;
+}
+.noUi-base,
+.noUi-connects {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+/* Wrapper for all connect elements.
+ */
+.noUi-connects {
+  overflow: hidden;
+  z-index: 0;
+}
+.noUi-connect,
+.noUi-origin {
+  will-change: transform;
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  -ms-transform-origin: 0 0;
+  -webkit-transform-origin: 0 0;
+  -webkit-transform-style: preserve-3d;
+  transform-origin: 0 0;
+  transform-style: flat;
+}
+/* Offset direction
+ */
+.noUi-txt-dir-rtl.noUi-horizontal .noUi-origin {
+  left: 0;
+  right: auto;
+}
+/* Give origins 0 height/width so they don't interfere with clicking the
+ * connect elements.
+ */
+.noUi-vertical .noUi-origin {
+  top: -100%;
+  width: 0;
+}
+.noUi-horizontal .noUi-origin {
+  height: 0;
+}
+.noUi-handle {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  position: absolute;
+}
+.noUi-touch-area {
+  height: 100%;
+  width: 100%;
+  outline:none;
+}
+.noUi-state-tap .noUi-connect,
+.noUi-state-tap .noUi-origin {
+  -webkit-transition: transform 0.3s;
+  transition: transform 0.3s;
+}
+.noUi-state-drag * {
+  cursor: inherit !important;
+}
+/* Slider size and handle placement;
+ */
+
+.noUi-horizontal {
+    height: 47px;
+    width: 80%;
+   top: 0px;
+left: 20%;
+}
+
+.noUi-horizontal .noUi-handle {
+    width: 24px;
+    height: 45px;
+    right: -17px;
+    top: -1px;
+    border-radius: 9px;
+}
+
+/* Styling;
+ * Giving the connect element a border radius causes issues with using transform: scale
+ */
+.noUi-target {
+    background: #FCFCFC;
+    border: 1px solid #ddd;
+    border-radius:0;
+    box-shadow:none;
+    
+}
+
+.noUi-connects {
+  border-radius: 3px;
+}
+.noUi-connect {
+  background: #3FB8AF;
+}
+/* Handles and cursors;
+ */
+.noUi-draggable {
+  cursor: ew-resize;
+}
+.noUi-vertical .noUi-draggable {
+  cursor: ns-resize;
+}
+.noUi-handle {
+  border: 1px solid #D9D9D9;
+  border-radius: 3px;
+  background: #FFF;
+  cursor: default;
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #EBEBEB, 0 3px 6px -3px #BBB;
+}
+.noUi-active {
+  box-shadow: inset 0 0 1px #FFF, inset 0 1px 7px #DDD, 0 3px 6px -3px #BBB;
+}
+/* Handle stripes;
+ */
+.noUi-handle:before,
+.noUi-handle:after {
+  content: "";
+  display: block;
+  position: absolute;
+  height: 14px;
+  width: 1px;
+  background: #E8E7E6;
+  left: 14px;
+  top: 6px;
+}
+.noUi-handle:after {
+  left: 17px;
+}
+
+/* Values;
+ *
+ */
+.noUi-value {
+  position: absolute;
+  white-space: nowrap;
+  text-align: center;
+}
+.noUi-value-sub {
+  color: #ccc;
+  font-size: 10px;
+}
+
+/*end nouislider*/
+
+/*dd.css*/
+.borderRadius{-moz-border-radius:5px; border-radius:5px; }
+.borderRadiusTp{-moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0;}
+.borderRadiusBtm{-moz-border-radius:0 0 5px 5px ; border-radius:0 0 5px 5px;}
+
+.ddcommon {position:relative;display:-moz-inline-stack; zoom:1; display:inline-block; *display:inline; cursor:default;}
+.ddcommon ul{padding:0;margin:0;}
+.ddcommon ul li{list-style-type:none;}
+.borderRadiusTp ul li:last-child{-moz-border-radius:0 0 5px 5px ; border-radius:0 0 5px 5px;border-bottom:0 none #c3c3c3; }
+.borderRadiusBtm ul li:first-child{-moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0 ;border-bottom:1 solid #c3c3c3; }
+
+.ddcommon .disabled img, .ddcommon .disabled span, .ddcommon.disabledAll{
+opacity: .5; /* standard: ff gt 1.5, opera, safari */
+-ms-filter:"alpha(opacity=50)"; /* ie 8 */
+filter:alpha(opacity=50); /* ie lt 7 */
+-khtml-opacity:.5; /* safari 1.x */
+-moz-opacity:.5; /* ff lt 1.5, netscape */
+color:#999999;
+}
+.ddcommon .clear{clear:both}
+.ddcommon .shadow{-moz-box-shadow:5px 5px 5px -5px #888888;-webkit-box-shadow:5px 5px 5px -5px #888888;box-shadow: 5px 5px 5px -5px #888888;}
+.ddcommon input.text{color:#7e7e7e;padding:0 0 0 0; position:absolute; background:#fff; display:block; width:98%; height:98%; left:2px; top:0; border:none;}
+.ddOutOfVision{position:relative; display:-moz-inline-stack; display:inline-block; zoom:1; *display:inline;}
+.borderRadius .shadow{-moz-box-shadow:5px 5px 5px -5px #888888;-webkit-box-shadow:5px 5px 5px -5px #888888;box-shadow: 5px 5px 5px -5px #888888;}
+.borderRadiusBtm .shadow{-moz-box-shadow:-5px -5px 5px -5px #888888;-webkit-box-shadow:-5px -5px 5px -5px #888888;box-shadow: -5px -5px 5px -5px #888888}
+.borderRadiusTp .border, .borderRadius .border{-moz-border-radius:0 0 5px 5px ; border-radius:0 0 5px 5px;}
+.borderRadiusBtm .border{-moz-border-radius:5px 5px 0 0; border-radius:5px 5px 0 0;}
+img.fnone{float:none !important}
+.ddcommon .divider{width:0; height:100%; position:absolute;}
+.ddcommon .ddArrow{display:inline-block; position:absolute; top:50%; right:4px;}
+.ddcommon .ddArrow:hover{background-position:0 100%;}
+.ddcommon .ddTitle{padding:0; position:relative; display:inline-block; width:100%}
+.ddcommon .ddTitle .ddTitleText{display:block;}
+.ddcommon .ddTitle .ddTitleText .ddTitleText{padding:0;}
+.ddcommon .ddTitle .description{display:block;}
+.ddcommon .ddTitle .ddTitleText img{position:relative; vertical-align:middle; float:left}
+.ddcommon .ddChild{position:absolute;display:none;width:100%;overflow-y:auto; overflow-x:hidden; zoom:1; z-index:9999}
+.ddcommon .ddChild li{clear:both;}
+.ddcommon .ddChild li .description{display:block;}
+.ddcommon .ddChild li img{border:0 none; position:relative;vertical-align:middle;float:left}
+.ddcommon .ddChild li.optgroup{padding:0;}
+.ddcommon .ddChild li.optgroup .optgroupTitle{padding:0 5px; font-weight:bold; font-style:italic}
+.ddcommon .ddChild li.optgroup ul li{padding:5px 5px 5px 15px}
+.ddcommon .noBorderTop{border-top:none 0  !important; padding:0; margin:0;}
+
+/*************** default theme **********************/
+.dd{border:1px solid #ddd;}
+.dd .divider{border-left:1px solid #c3c3c3; border-right:1px solid #fff;; right:24px;}
+.dd .ddArrow{width:16px;height:16px; margin-top:-8px; background:url(dd_arrow.gif) no-repeat;}
+.dd .ddArrow:hover{background-position:0 100%;}
+.dd .ddTitle{color:#000;background:#e2e2e4 url(../../images/msdropdown/skin1/title-bg.gif) repeat-x left top;}
+.dd .ddTitle .ddTitleText{padding:5px 20px 5px 5px;}
+.dd .ddTitle .ddTitleText .ddTitleText{padding:0;}
+.dd .ddTitle .description{font-size:12px; color:#666}
+.dd .ddTitle .ddTitleText img{padding-right:5px;}
+.dd .ddChild{border:1px solid #c3c3c3; background-color:#fff; left:-1px;}
+.dd .ddChild li{padding:5px; background-color:#fff; border-bottom:1px solid #c3c3c3;}
+.dd .ddChild li .description{color:#666;}
+.dd .ddChild li .ddlabel{color:#666;}
+.dd .ddChild li.hover{background-color:#f2f2f2}
+.dd .ddChild li img{padding:0 6px 0 0;}
+.dd .ddChild li.optgroup{padding:0;}
+.dd .ddChild li.optgroup .optgroupTitle{padding:0 5px; font-weight:bold; font-style:italic}
+.dd .ddChild li.optgroup ul li{padding:5px 5px 5px 15px}
+.dd .ddChild li.selected{background-color:#d5d5d5; color:#000;}
+
+
+/*customhere*/
+.ddlabel {float:right; padding-right:10px;color:#666;}
+.dd .divider {display:none;}
+.dd .ddTitle {background:none;}
+.borderRadius {border-radius:0;}
+.ddcommon .ddTitle {padding-top:5px; display: block !important; }
+#post li {list-style-type:none;}
+.smallEffs_alt .optgroup, .smallEffs_ol .optgroup, .smallEffs .optgroup { background:none !important;} 
+#textPreviewTextEffect_child, #effect_child {top:0 !important; height:260px !important;}
+input[type="text"] {height:47px;}
+
+#span1 {padding:0.9em !important;}
+
+
+/*-------------------dd-------------------*/
+
+
+/************* use sprite *****************/
+.smallEffs_alt li, .smallEffs_alt .ddTitleText, .smallEffs_ol li, .smallEffs_ol .ddTitleText {
+	/* .smallIcons .ddTitle .ddTitleText  - this will be used when option is selected */
+	
+	padding-left:7px !important;
+	height:30px;
+}
+
+
+.smallEffs li, .smallEffs .ddTitleText{
+	/* .smallIcons .ddTitle .ddTitleText  - this will be used when option is selected */
+	background-image:url(https://fontmeme.com/assets/sprites211018.png);
+	background-repeat:no-repeat;
+	padding-left:7px !important;
+	height:30px;
+}
+
+.smallFonts li, .smallFonts .ddTitleText{
+	/* .smallIcons .ddTitle .ddTitleText  - this will be used when option is selected 
+	background-image:url(spritestest.png);
+	background-repeat:no-repeat; */
+	padding-left:7px !important;
+	height:30px; 
+}
+
+/*remove width=*/
+
+.smallEffs .None { background-position: 0 0; } 
+.smallEffs .Style-Dissolving { background-position: 0 -45px;  } 
+.smallEffs .Style-DragonB { background-position: 0 -90px;  } 
+.smallEffs .Style-Dynamite { background-position: 0 -135px; } 
+.smallEffs .Style-Elegance { background-position: 0 -180px;  } 
+.smallEffs .Style-Embroidery { background-position: 0 -225px; } 
+.smallEffs .Style-France { background-position: 0 -270px; } 
+.smallEffs .Style-Frozen { background-position: 0 -315px;  } 
+.smallEffs .Style-Galdient { background-position: 0 -360px;  } 
+.smallEffs .Style-GeoDash { background-position: 0 -405px;  } 
+.smallEffs .Style-Germany { background-position: 0 -450px; } 
+.smallEffs .Style-GlitchA { background-position: 0 -495px;  } 
+.smallEffs .Style-GlitchB { background-position: 0 -540px;  } 
+.smallEffs .Style-Hexadots { background-position: 0 -585px;  } 
+.smallEffs .Style-Indiana-Jones { background-position: 0 -630px;  } 
+.smallEffs .Style-Ireland { background-position: 0 -675px; } 
+.smallEffs .Style-Italy { background-position: 0 -720px; } 
+.smallEffs .Style-KISS { background-position: 0 -765px;  } 
+.smallEffs .Style-Mango { background-position: 0 -810px;  } 
+.smallEffs .Style-Mario { background-position: 0 -855px;  } 
+.smallEffs .Style-Milky { background-position: 0 -900px;  } 
+.smallEffs .Style-Minecraft { background-position: 0 -945px;  } 
+.smallEffs .Style-Miniadow { background-position: 0 -990px;  } 
+.smallEffs .Style-NameTag-Blue { background-position: 0 -1035px;  } 
+.smallEffs .Style-NameTag-Red { background-position: 0 -1080px;  } 
+.smallEffs .Style-Nardient { background-position: 0 -1125px;  } 
+.smallEffs .Style-Neon { background-position: 0 -1170px;  } 
+.smallEffs .Style-NeonBeats { background-position: 0 -1215px;  } 
+.smallEffs .Style-NeonOutline { background-position: 0 -1260px;  } 
+.smallEffs .Style-ObliqueR { background-position: 0 -1305px;  } 
+.smallEffs .Style-Oblique { background-position: 0 -1350px;  } 
+.smallEffs .Style-OutlineGB { background-position: 0 -1395px;  } 
+.smallEffs .Style-OutlineUltra { background-position: 0 -1440px;  } 
+.smallEffs .Style-OutlineYB { background-position: 0 -1485px;  } 
+.smallEffs .Style-Party { background-position: 0 -1530px;  } 
+.smallEffs .Style-PAWP { background-position: 0 -1575px;  } 
+.smallEffs .Style-Pokemon { background-position: 0 -1620px;  } 
+.smallEffs .Style-PolkaDot { background-position: 0 -1665px;  } 
+.smallEffs .Style-Popstar { background-position: 0 -1710px;  } 
+.smallEffs .Style-Pressed { background-position: 0 -1755px; } 
+.smallEffs .Style-Rainbow { background-position: 0 -1800px; } 
+.smallEffs .Style-RainbowD { background-position: 0 -1845px; } 
+.smallEffs .Style-RainbowH { background-position: 0 -1890px; } 
+.smallEffs .Style-RainbowV { background-position: 0 -1935px; } 
+.smallEffs .Style-Retro { background-position: 0 -1980px; } 
+.smallEffs .Style-RobT { background-position: 0 -2025px;  } 
+.smallEffs .Style-Romania { background-position: 0 -2070px; } 
+.smallEffs .Style-Russia { background-position: 0 -2115px; } 
+.smallEffs .Style-SchoolBook { background-position: 0 -2160px; } 
+.smallEffs .Style-Sensual { background-position: 0 -2205px;  } 
+.smallEffs .Style-Slant { background-position: 0 -2250px;  } 
+.smallEffs .Style-SmashB { background-position: 0 -2295px;  } 
+.smallEffs .Style-Spain { background-position: 0 -2340px; } 
+.smallEffs .Style-Sports { background-position: 0 -2385px;  } 
+.smallEffs .Style-Stacked { background-position: 0 -2430px;  }  
+.smallEffs .Style-StackedLines { background-position: 0 -2565px;  } 
+.smallEffs .Style-Stamp { background-position: 0 -2610px;  } 
+.smallEffs .Style-StarStripes { background-position: 0 -2655px; } 
+.smallEffs .Style-StarW { background-position: 0 -2700px;  } 
+.smallEffs .Style-Steel { background-position: 0 -2745px;  } 
+.smallEffs .Style-STHollow { background-position: 0 -2790px;  } 
+.smallEffs .Style-StickyNotes-A { background-position: 0 -2835px;  } 
+.smallEffs .Style-StickyNotes-B { background-position: 0 -2880px;  } 
+.smallEffs .Style-StickyNotes-C { background-position: 0 -2925px;  } 
+.smallEffs .Style-StickyNotes-D { background-position: 0 -2970px;  } 
+.smallEffs .Style-STSolid { background-position: 0 -3015px;  } 
+.smallEffs .Style-ToyStory { background-position: 0 -3060px;  } 
+.smallEffs .Style-Twitch { background-position: 0 -3105px;  } 
+.smallEffs .Style-Twitter { background-position: 0 -3150px;  } 
+.smallEffs .Style-UPUP { background-position: 0 -3195px;  } 
+.smallEffs .Style-Wavy { background-position: 0 -3240px;  } 
+.smallEffs .Style-Wood { background-position: 0 -3285px;  } 
+.smallEffs .Texture-Army { background-position: 0 -3330px; } 
+.smallEffs .Texture-Beer { background-position: 0 -3375px; } 
+.smallEffs .Texture-Bricks { background-position: 0 -3420px; } 
+.smallEffs .Texture-Chocolate { background-position: 0 -3465px; } 
+.smallEffs .Texture-Cloth { background-position: 0 -3510px; } 
+.smallEffs .Texture-Cloud { background-position: 0 -3555px; } 
+.smallEffs .Texture-Diamond { background-position: 0 -3600px; } 
+.smallEffs .Texture-Electric { background-position: 0 -3645px; } 
+.smallEffs .Texture-Fire { background-position: 0 -3690px; } 
+.smallEffs .Texture-Glitter-A { background-position: 0 -3735px; } 
+.smallEffs .Texture-Glitter-B { background-position: 0 -3780px; } 
+.smallEffs .Texture-Glitter-C { background-position: 0 -3825px; } 
+.smallEffs .Texture-Glitter-D { background-position: 0 -3870px; } 
+.smallEffs .Texture-Gold-A { background-position: 0 -3915px; } 
+.smallEffs .Texture-Gold-B { background-position: 0 -3960px; } 
+.smallEffs .Texture-Gold-C { background-position: 0 -4005px; } 
+.smallEffs .Texture-Gold-D { background-position: 0 -4050px; } 
+.smallEffs .Texture-Gold-E { background-position: 0 -4095px; } 
+.smallEffs .Texture-Gold-F { background-position: 0 -4140px; } 
+.smallEffs .Texture-Gold-G { background-position: 0 -4185px; } 
+.smallEffs .Texture-Gold-H { background-position: 0 -4230px; } 
+.smallEffs .Texture-Gold-I { background-position: 0 -4275px; } 
+.smallEffs .Texture-Gold-RA { background-position: 0 -4320px; } 
+.smallEffs .Texture-Gold-RB { background-position: 0 -4365px; } 
+.smallEffs .Texture-Graffiti { background-position: 0 -4410px; } 
+.smallEffs .Texture-Granite { background-position: 0 -4455px; } 
+.smallEffs .Texture-Grid { background-position: 0 -4500px; } 
+.smallEffs .Texture-Hex { background-position: 0 -4545px; } 
+.smallEffs .Texture-Hot-Lava { background-position: 0 -4590px; } 
+.smallEffs .Texture-Iceberg { background-position: 0 -4635px; } 
+.smallEffs .Texture-Jigsaw { background-position: 0 -4680px; } 
+.smallEffs .Texture-Leaves { background-position: 0 -4725px; } 
+.smallEffs .Texture-Luxury { background-position: 0 -4770px; } 
+.smallEffs .Texture-Marble { background-position: 0 -4815px; } 
+.smallEffs .Texture-Metal { background-position: 0 -4860px; } 
+.smallEffs .Texture-Mirror { background-position: 0 -4905px; } 
+.smallEffs .Texture-Money { background-position: 0 -4950px; } 
+.smallEffs .Texture-Mud { background-position: 0 -4995px; } 
+.smallEffs .Texture-Paper { background-position: 0 -5040px; } 
+.smallEffs .Texture-Pool { background-position: 0 -5085px; } 
+.smallEffs .Texture-Rust { background-position: 0 -5130px; } 
+.smallEffs .Texture-Sky { background-position: 0 -5175px; } 
+.smallEffs .Texture-Slate { background-position: 0 -5220px; } 
+.smallEffs .Texture-Smog { background-position: 0 -5265px; } 
+.smallEffs .Texture-Space { background-position: 0 -5310px; } 
+.smallEffs .Texture-Space-A { background-position: 0 -5355px; } 
+.smallEffs .Texture-Space-B { background-position: 0 -5400px; } 
+.smallEffs .Texture-Space-C { background-position: 0 -5445px; } 
+.smallEffs .Texture-Space-D { background-position: 0 -5490px; } 
+.smallEffs .Texture-Steel { background-position: 0 -5535px; } 
+.smallEffs .Texture-Stripes { background-position: 0 -5580px; } 
+.smallEffs .Texture-Tiger { background-position: 0 -5625px; } 
+.smallEffs .Texture-Valentine { background-position: 0 -5670px; } 
+.smallEffs .Texture-Walnut { background-position: 0 -5715px; } 
+.smallEffs .Texture-Warning { background-position: 0 -5760px; } 
+.smallEffs .Texture-Water-Blue { background-position: 0 -5805px; } 
+.smallEffs .Texture-Watercolor { background-position: 0 -5850px; } 
+.smallEffs .Texture-Water-Pink { background-position: 0 -5895px; } 
+.smallEffs .Texture-Waves { background-position: 0 -5940px; } 
+.smallEffs .Texture-Wheat { background-position: 0 -5985px; } 
+.smallEffs .Texture-Wood-A { background-position: 0 -6030px; } 
+.smallEffs .Texture-Wood-B { background-position: 0 -6075px; } 
+.smallEffs .Texture-Wood-C { background-position: 0 -6120px; } 
+.smallEffs .Texture-Wood-D { background-position: 0 -6165px; } 
+.smallEffs .Texture-Wood-E { background-position: 0 -6210px; } 
+.smallEffs .Texture-Wood-F { background-position: 0 -6255px; } 
+.smallEffs .Gradient-H { background-position: 0 -6300px; } 
+.smallEffs .Gradient-R { background-position: 0 -6345px; } 
+.smallEffs .Gradient-V { background-position: 0 -6390px; } 
+.smallEffs .Outline-A { background-position: 0 -6435px;  } 
+.smallEffs .Outline-B { background-position: 0 -6480px;  } 
+.smallEffs .Outline-D { background-position: 0 -6525px;  } 
+.smallEffs .Outline-Transparent { background-position: 0 -6570px;  } 
+.smallEffs .Shadow-L { background-position: 0 -6615px;  } 
+.smallEffs .Shadow-S { background-position: 0 -6660px;  } 
+.smallEffs .Shadow-SolidL { background-position: 0 -6705px;  } 
+.smallEffs .Shadow-SolidS { background-position: 0 -6750px; } 
+.smallEffs .Shadow-Stripe { background-position: 0 -6795px;  } 
+.smallEffs .Style-Animadow { background-position: 0 -6840px;  } 
+.smallEffs .Style-Apple { background-position: 0 -6885px; } 
+.smallEffs .Style-Argentina { background-position: 0 -6930px; } 
+.smallEffs .Style-Backwoods { background-position: 0 -6975px;  } 
+.smallEffs .Style-BackwooA { background-position: 0 -6975px;  } 
+.smallEffs .Style-Baseball { background-position: 0 -7020px;  } 
+.smallEffs .Style-Bendient { background-position: 0 -7065px;  } 
+.smallEffs .Style-BevelG { background-position: 0 -7110px;  } 
+.smallEffs .Style-BevelS { background-position: 0 -7155px;  } 
+.smallEffs .Style-Birthday { background-position: 0 -7200px;  } 
+.smallEffs .Style-BLM01 { background-position: 0 -7245px;  } 
+.smallEffs .Style-BLM02 { background-position: 0 -7290px;  } 
+.smallEffs .Style-BLM03 { background-position: 0 -7335px;  } 
+.smallEffs .Style-BLM04 { background-position: 0 -7380px;  } 
+.smallEffs .Style-BlocksA { background-position: 0 -7425px;  } 
+.smallEffs .Style-BlocksB { background-position: 0 -7470px;  } 
+.smallEffs .Style-BoxLogo { background-position: 0 -7515px;  } 
+.smallEffs .Style-BoxLogo_S { background-position: 0 -7560px;  } 
+.smallEffs .Style-BTTF { background-position: 0 -7605px;  } 
+.smallEffs .Style-CastleCrashers { background-position: 0 -7650px;  } 
+.smallEffs .Style-Chevron { background-position: 0 -7695px;  } 
+.smallEffs .Style-Chocolate { background-position: 0 -7740px;  } 
+.smallEffs .Style-Chrome { background-position: 0 -7785px; } 
+.smallEffs .Style-Colombia { background-position: 0 -7830px; } 
+.smallEffs .Style-Columbia { background-position: 0 -7875px; } 
+.smallEffs .Style-Comic { background-position: 0 -7920px;  } 
+.smallEffs .Style-ConcaveB { background-position: 0 -7965px;  } 
+.smallEffs .Style-ConcaveBB { background-position: 0 -8010px;  } 
+.smallEffs .Style-ConcaveT { background-position: 0 -8055px;  } 
+.smallEffs .Style-ConcaveTT { background-position: 0 -8100px;  } 
+.smallEffs .Style-Condense { background-position: 0 -8145px;  } 
+.smallEffs .Style-Cupadow { background-position: 0 -8190px;  } 
+.smallEffs .Style-GlitchC { background-position: 0 -8235px;  } 
+.smallEffs .Style-GlitchD { background-position: 0 -8280px;  } 
+.smallEffs .Style-Rotalic { background-position: 0 -8325px;  } 
+.smallEffs .Style-BackwooB { background-position: 0 -8370px;  } 
+.smallEffs .Style-Mariadow { background-position: 0 -8415px;  } 
+.smallEffs .Style-Uniadow { background-position: 0 -8460px;  } 
+.smallEffs .Style-Coolmelon { background-position: 0 -8505px;  } 
+.smallEffs .Style-Spideroo { background-position: 0 -8550px;  } 
+.smallEffs .Style-Banner { background-position: 0 -8595px;  } 
+.smallEffs .Style-Blacklist { background-position: 0 -8640px;  } 
+.smallEffs .Style-SPLIT { background-position: 0 -8685px;  } 
+.smallEffs .Style-SplitColor { background-position: 0 -8730px;  } 
+.smallEffs .Style-Skew { background-position: 0 -8775px;  } 

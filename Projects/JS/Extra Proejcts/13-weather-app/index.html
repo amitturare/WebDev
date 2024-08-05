@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Web App</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/ico" href="favicon.ico">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"/>
+    
+</head>
+<body>
+    <main id="main">
+        <div class="wrapper">
+
+            <div class="input-part">
+                <!-- Main Icon -->
+                <i class="fa-solid fa-cloud icon main-icon"></i>
+                
+                <!-- Input Box -->
+                <div class="input-box">
+                    <form id="form">
+                        <input type="text" class="search" placeholder="Eg. London" spellcheck="false" required>
+                    </form>
+                </div>
+                <!-- Location-Btn -->
+                <button class="location-btn">
+                    <i class="fa-solid fa-location-crosshairs icon"></i>
+                </button>
+            </div>
+
+            <div class="content">
+
+                <!-- Weather Icon -->
+                <img src="icons/113-day.svg" class="weather-icon" alt="icon">
+                <!-- Temperature -->
+                <div class="temp main">
+                    <span class="number">0</span>
+                    <span class="deg">°</span>C
+                </div>
+                <!-- Info-Text -->
+                <div class="weather-text">Maybe Sunny Day</div>
+                <div class="location">
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <span class="location-text">Enter your location!</span>
+                </div>
+
+                <!-- Extra Details -->
+                <div class="extra-details">
+                    <!-- Feels Like -->
+                    <article class="feels">
+                        <i class="fa-solid fa-temperature-three-quarters"></i>
+                        <div class="details">
+                            <div class="temp">
+                                <span class="number">0</span>
+                                <span class="deg">°</span>C
+                            </div>
+                            <p>Feels like</p>
+                        </div>
+                    </article>
+                    <!-- Humidity -->
+                    <article class="humidity">
+                        <i class="fa-solid fa-droplet"></i>                        
+                        <div class="details">
+                            <span class="number">0</span>
+                            <span class="unit">%</span>
+                            <p>Humidity</p>
+                        </div>
+                    </article>
+                    <!-- Wind Speed -->
+                    <article class="wind-speed">
+                        <i class="fa-solid fa-wind"></i>                        
+                        <div class="details">
+                            <span class="number">0</span>
+                            <span class="unit">km/hr</span>
+                            <p>Wind</p>
+                        </div>
+                    </article>
+                    <!-- Precipitation -->
+                    <article class="precipitation">
+                        <i class="fa-solid fa-cloud-showers-heavy"></i>                  
+                        <div class="details">    
+                            <span class="number">0</span>
+                            <span class="unit">mm</span>
+                            <p>Precipitation</p>
+                        </div>
+                    </article>
+
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Script -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

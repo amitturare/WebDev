@@ -1,0 +1,92 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
+html {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    font-family: "Poppins", sans-serif;
+    letter-spacing: 1px;
+
+    display: grid;
+    place-items: center;
+
+    background-color: #c9ced3;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='49' viewBox='0 0 28 49'%3E%3Cg fill-rule='evenodd'%3E%3Cg id='hexagons' fill='%23fff' fill-opacity='0.3' fill-rule='nonzero'%3E%3Cpath d='M13.99 9.25l13 7.5v15l-13 7.5L1 31.75v-15l12.99-7.5zM3 17.9v12.7l10.99 6.34 11-6.35V17.9l-11-6.34L3 17.9zM0 15l12.98-7.5V0h-2v6.35L0 12.69v2.3zm0 18.5L12.98 41v8h-2v-6.85L0 35.81v-2.3zM15 0v7.5L27.99 15H28v-2.31h-.01L17 6.35V0h-2zm0 49v-8l12.99-7.5H28v2.31h-.01L17 42.15V49h-2z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Card */
+.container {
+    width: 480px;
+    height: 680px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 5px 50px 10px rgba(0, 0, 0, 0.4);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Form */
+form {
+    width: 90%;
+}
+.form-group {
+    height: 65px;
+}
+.form-group {
+    margin: 0.25rem;
+}
+input {
+    width: 100%;
+    height: 34px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+    outline: none;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+input:valid {
+    border: 1px solid green;
+}
+input:invalid {
+    border: 1px solid red;
+}
+
+/* Button */
+button {
+    cursor: pointer;
+    color: white;
+    background: black;
+    border: none;
+    border-radius: 5px;
+    height: 50px;
+    width: 100%;
+    font-family: "Poppins", sans-serif;
+    font-size: 20px;
+    margin-top: 1rem;
+}
+button:hover {
+    -webkit-filter: brightness(200%);
+    filter: brightness(200%);
+    background-color: rgb(22 22 22);
+}
+button:focus {
+    outline: none;
+}
+
+/* Message */
+.message-container {
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 90%;
+  margin-top: 1rem;
+}
+.message-container h3 {
+  text-align: center;
+}

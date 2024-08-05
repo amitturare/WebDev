@@ -1,0 +1,60 @@
+html {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+    background-color: #ffffcc;
+}
+
+/* Container */
+.container {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    background: url("./penguin.gif") no-repeat;
+    background-size: 700px;
+    background-position: left center; /* Horizontal Vertical */
+    background-position: 200px center;
+}
+
+/* Button */
+button {
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    height: 50px;
+    font-family: "Courier New", Courier, monospace;
+    font-size: 20px;
+    color: #fff;
+    background-color: #4a525a;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 2px 2px 20px 10px rgba(0, 0, 0, 0.2);
+}
+button:hover {
+    -webkit-filter: brightness(95%);
+    filter: brightness(95%); 
+}
+button:active {
+    transform: scale(0.98);
+}
+button:disabled {
+    cursor: default;
+    -webkit-filter: brightness(30%);
+    filter: brightness(30%);
+}
+
+/* Media Query for smaller displays */
+@media screen and (max-width: 1000px) {
+    .container {
+        background-position: center center;
+    }
+    button {
+        box-shadow: 5px 5px 30px 20px rgba(0, 0, 0, 0.5);
+    }
+}

@@ -1,5 +1,5 @@
 /* FONTS */
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&family=Montserrat&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:200i,400&display=swap');
 html {
     font-size: 100%;
 } /*16px*/
@@ -22,8 +22,8 @@ html {
     --white: #fff;
 
     /* fonts  */
-    --headingFont: 'Roboto', sans-serif;
-    --bodyFont: 'Nunito', sans-serif;
+    --headingFont: 'Poppins', sans-serif;
+    --bodyFont: 'Poppins', sans-serif;
     --smallText: 0.7em;
     /* rest of the vars */
     --backgroundColor: var(--grey-50);

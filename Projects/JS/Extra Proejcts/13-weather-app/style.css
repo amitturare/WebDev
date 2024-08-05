@@ -1,0 +1,220 @@
+/* Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+
+html {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: linear-gradient(to bottom, #48c6ef 0%, #6f86d6 100%);
+    font-family: "Poppins", sans-serif;
+
+    display: grid;
+    place-items: center;
+}
+
+.wrapper {
+    background: rgba(255, 255, 255, 0.2);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+
+    width: 360px;
+    height: 660px;
+    border-radius: 10px;
+    margin-top: -2rem;
+}
+
+/* 
+========
+Input Part 
+========
+*/
+.input-part {
+    padding: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.main-icon {
+    position: relative;
+    top: 3.5px;
+}
+.input-box {
+    width: 100%;
+}
+.search {
+    width: 102%;
+    padding: 0.5rem;
+    border-radius: 50px;
+    border: none;
+    margin-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.search:focus {
+    outline: none;
+}
+.search::-webkit-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::-moz-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search:-ms-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::-ms-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::-webkit-input-placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+
+.search::placeholder {
+    padding-left: 10px;
+    font-family: "Poppins", sans-serif;
+}
+.icon {
+    font-size: 1.5rem;
+    color: rgba(0, 0, 0, 0.767);
+}
+.location-btn {
+    background: none;
+    border: none;
+    position: relative;
+    right: 5px;
+    top: 1.5px;
+}
+.location-btn:focus {
+    outline: none;
+}
+.fa-location-crosshairs {
+    font-size: 1.25rem;
+}
+.location-btn:hover .fa-location-crosshairs {
+    color: #5ba7e3;
+    cursor: pointer;
+}
+
+/* 
+========
+Content
+========
+*/
+.content {
+    padding: 5rem 1rem;
+    padding-bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.content img {
+    transform: scale(3.5);
+    margin-bottom: 2rem;
+}
+.content .temp {
+    display: flex;
+    font-size: 72px;
+    font-weight: 500;
+}
+.content .temp .numb {
+    font-weight: 600;
+}
+.content .temp .deg {
+    display: block;
+    font-size: 40px;
+    margin: 5px 5px 0 0;
+}
+.content .location {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+    font-size: 1.3rem;
+}
+.location i {
+    font-size: 1.3rem;
+    margin-right: 8px;
+}
+.long {
+    position: relative;
+    bottom: 16px;
+    left: 22px;
+}
+.location-text {
+    text-align: center;
+}
+
+.extra-details {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+
+    margin-top: -5rem;
+    padding: 1rem;
+    width: 99%;
+    height: 10rem;
+
+    display: grid;
+    align-items: center;
+    justify-content: space-evenly;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 1.5rem;
+
+    position: relative;
+    top: 91px;
+    border-radius: 10px;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+}
+.extra-details article {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+article i {
+    font-size: 30px;
+    margin-right: 10px;
+}
+.details .temp,
+.humidity span {
+    font-size: 1rem;
+    font-weight: 500;
+}
+.humidity .unit {
+    position: relative;
+    right: 3px;
+}
+.details .temp .deg {
+    margin: 0;
+    font-size: 1rem;
+    padding: 0 2px 0 1px;
+}
+.details p {
+    font-size: 0.75rem;
+    margin: 0;
+}
+.feels {
+    position: relative;
+    right: 15px;
+}
+.humidity {
+    position: relative;
+    right: 15px;
+}

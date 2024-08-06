@@ -1,25 +1,23 @@
-import FormInput from "../FormInput/FormInput";
+import ExpenseForm from "../ExpenseForm/ExpenseForm";
+
+import { IInputExpenseData } from "./NewExpense.types";
 
 import styles from "./NewExpense.module.scss";
 
-const NewExpense = () => {
-	const { newExpense, controls, actions } = styles;
+const NewExpense = ({ onAddExpenseData }: { onAddExpenseData: (expenseData: any) => void }) => {
+	const { newExpense } = styles;
 
-	const inputChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-		console.log(event.target.value);
+	const saveExpenseDataHandler = (inputExpenseDate: IInputExpenseData) => {
+		const expenseData = {
+			...inputExpenseDate,
+			id: Math.random().toString(),
+		};
+		onAddExpenseData(expenseData);
 	};
+
 	return (
 		<div className={newExpense}>
-			<form>
-				<div className={controls}>
-					<FormInput title="Title" type="text" inputChangeHandler={inputChangeHandler} />
-					<FormInput title="Amount" type="number" inputChangeHandler={inputChangeHandler} />
-					<FormInput title="Date" type="Date" inputChangeHandler={inputChangeHandler} />
-				</div>
-				<div className={actions}>
-					<button type="submit">Add Expense</button>
-				</div>
-			</form>
+			<ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
 		</div>
 	);
 };

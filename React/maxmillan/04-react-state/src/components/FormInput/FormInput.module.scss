@@ -1,0 +1,16 @@
+.control {
+	label {
+		font-weight: bold;
+		margin-bottom: 0.5rem;
+		display: block;
+	}
+
+	input {
+		font: inherit;
+		padding: 0.5rem;
+		border-radius: 6px;
+		border: 1px solid #ccc;
+		width: 20rem;
+		max-width: 100%;
+	}
+}

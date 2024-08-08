@@ -4,6 +4,7 @@ import { IExpensesProps } from "./Expenses.types";
 
 import Card from "../Card/Card";
 import ExpenseFilter from "../ExpenseFilter/ExpenseFilter";
+import ExpenseChart from "../ExpenseChart/ExpenseChart";
 import ExpenseList from "./ExpenseList/ExpenseList";
 
 import styles from "./Expenses.module.scss";
@@ -22,6 +23,8 @@ const Expenses = ({ expenses }: IExpensesProps) => {
 	return (
 		<Card className={expensesContainer}>
 			<ExpenseFilter selected={filteredYear} onChangeFilter={filterChangeHandler} />
+
+			<ExpenseChart expenses={filteredExpenses} />
 			<ExpenseList filteredExpenses={filteredExpenses} />
 		</Card>
 	);

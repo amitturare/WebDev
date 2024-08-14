@@ -1,1 +1,3 @@
-export interface IEmployeeDetailsProps {}
+export interface IEmployeeDetailsProps {
+	employeeDetails: any;
+}

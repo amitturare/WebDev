@@ -11,6 +11,7 @@ const Main = () => {
 	const { Main } = styles;
 
 	const [users, setUsers] = useState([]);
+	const [selectedUser, setSelectedUser] = useState();
 
 	const getUsers = async () => {
 		const data = await userService.getUsers();
@@ -21,10 +22,16 @@ const Main = () => {
 		getUsers();
 	}, []);
 
+	const handleEmployeeClick = (id: any) => {
+		const selectedUser = users.find((user) => user.id === id);
+		if (!selectedUser) return;
+		setSelectedUser(selectedUser);
+	};
+
 	return (
 		<main className={Main}>
-			<EmployeeList users={users} />
-			<EmployeeDetails />
+			<EmployeeList employees={users} onEmployeeClick={handleEmployeeClick} />
+			<EmployeeDetails employeeDetails={selectedUser} />
 		</main>
 	);
 };

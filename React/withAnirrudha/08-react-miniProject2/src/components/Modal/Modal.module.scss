@@ -1,0 +1,19 @@
+.Backdrop {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: rgba(0, 0, 0, 0.63);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.Modal {
+		width: 60%;
+		padding: 1rem;
+		border-radius: 4px;
+		background-color: #fff;
+	}
+}

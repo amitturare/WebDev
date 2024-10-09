@@ -1,0 +1,19 @@
+.Button {
+	padding: 0.5rem 1rem;
+	border: none;
+	border-radius: 6px;
+	background-color: transparent;
+	color: #a18aba;
+	font-family: "Roboto Condensed", sans-serif;
+	font-size: 1rem;
+	cursor: pointer;
+	transition: all 0.2s ease-in-out;
+}
+.Button:hover {
+	background-color: #1b082f;
+	color: #ebe7ef;
+}
+.Button:active {
+	background-color: #7925d3;
+	color: #ebe7ef;
+}

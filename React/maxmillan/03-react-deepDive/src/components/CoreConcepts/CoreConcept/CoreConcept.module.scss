@@ -1,0 +1,19 @@
+.CoreConcept {
+	width: 10rem;
+	text-align: center;
+
+	img {
+		height: 4rem;
+		width: 6rem;
+		-o-object-fit: cover;
+		object-fit: cover;
+	}
+
+	h3 {
+		margin: 0.5rem 0;
+	}
+
+	p {
+		font-size: 0.9rem;
+	}
+}

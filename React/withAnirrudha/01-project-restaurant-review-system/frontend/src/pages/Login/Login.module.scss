@@ -1,0 +1,18 @@
+.Container {
+	height: 100vh;
+
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+
+	.Intro {
+		max-width: 35rem;
+
+		h2 {
+			margin-bottom: 2rem;
+		}
+		p:last-child {
+			margin-top: 1rem;
+		}
+	}
+}

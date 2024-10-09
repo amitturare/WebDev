@@ -1,0 +1,23 @@
+.Header {
+	width: 100%;
+	color: gray;
+	background-color: #fff;
+	padding: 0.25rem 5rem;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	z-index: 100;
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+	.profile {
+		border-radius: 50%;
+	}
+
+	.MenuItem {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border: 2px solid red;
+	}
+}

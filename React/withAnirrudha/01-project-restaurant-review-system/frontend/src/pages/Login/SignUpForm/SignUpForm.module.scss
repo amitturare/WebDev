@@ -1,0 +1,36 @@
+.Container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	background-color: #fff;
+	box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+	margin-top: 2rem;
+	padding: 2rem;
+	width: 25rem;
+
+	p {
+		margin-top: 1rem;
+	}
+
+	.Form {
+		width: 100%;
+		background-color: #fff;
+		display: flex;
+		flex-direction: column;
+	}
+	.Form > div {
+		margin-bottom: 1.5rem;
+	}
+
+	.Title {
+		color: #000;
+		text-align: center;
+		margin-bottom: 2rem;
+	}
+
+	.Link {
+		color: blue;
+		cursor: pointer;
+	}
+}

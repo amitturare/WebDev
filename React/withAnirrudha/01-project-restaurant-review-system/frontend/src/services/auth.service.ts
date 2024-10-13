@@ -2,6 +2,17 @@ import axiosInstance from "./axios.instance";
 
 import { IUserLogin, IUserRegister } from "../pages/Login/auth.types";
 
+const googleLogIn = async (credential: string) => {
+	try {
+		const {
+			data: { authToken, user },
+		} = await axiosInstance.post("google", credential);
+		return { authToken, role: user.role, user };
+	} catch (error) {
+		throw error;
+	}
+};
+
 const signIn = async (data: IUserLogin) => {
 	try {
 		const {
@@ -31,5 +42,5 @@ const signOut = async (authToken: string) => {
 	}
 };
 
-const authService = { signIn, signUp, signOut };
+const authService = { googleLogIn, signIn, signUp, signOut };
 export default authService;

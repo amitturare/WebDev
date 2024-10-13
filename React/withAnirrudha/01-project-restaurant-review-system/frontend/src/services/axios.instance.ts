@@ -21,7 +21,7 @@ axiosInstance.interceptors.response.use(
 	},
 	(error) => {
 		if (error.response && ![200, 201].includes(error.response.status)) {
-			toast.error("Error, Try Again!");
+			console.error("Error, Try Again!", error);
 		}
 	}
 );

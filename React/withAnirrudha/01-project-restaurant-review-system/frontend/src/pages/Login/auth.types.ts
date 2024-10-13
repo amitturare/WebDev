@@ -29,6 +29,7 @@ export type IAuthAction =
 	| { type: AUTH_ACTIONS.SIGN_OUT };
 
 export interface IAuthContext extends IAuthState {
+	handleGoogleLogin: (credential: string) => Promise<{ authToken: string; role: string } | void>;
 	handleLogin: (data: { username: string; password: string }) => Promise<{ authToken: string; role: string } | void>;
 	handleLogout: (authToken: string) => Promise<void>;
 	handleRegister: (data: IUserRegister) => Promise<void>;

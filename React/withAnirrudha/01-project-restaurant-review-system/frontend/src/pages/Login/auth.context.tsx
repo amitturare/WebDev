@@ -62,6 +62,24 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 		}
 	};
 
+	const handleGoogleLogin = async (credential: string) => {
+		try {
+			const response = await authService.googleLogIn(credential);
+
+			if (response?.role && response?.authToken) {
+				localStorage.setItem("userRole", response.role);
+				localStorage.setItem("userId", response.user._id);
+				localStorage.setItem("authToken", response.authToken);
+
+				dispatch({ type: AUTH_ACTIONS.AUTH_SUCCESS, data: { role: response.role, userData: response.user } });
+				toast.success("Successfully Logged In");
+			}
+		} catch (error) {
+			dispatch({ type: AUTH_ACTIONS.AUTH_FAILED, data: { message: "Login failed" } });
+			toast.error("Failed to log you in. Try Again!");
+		}
+	};
+
 	const handleLogin = async (data: IUserLogin) => {
 		try {
 			const response = await authService.signIn(data);
@@ -107,6 +125,7 @@ export const AuthProvider: FC<AuthProviderProps> = ({ children }) => {
 				userData: state.userData,
 				isLoading: state.isLoading,
 				errorMessage: state.errorMessage,
+				handleGoogleLogin,
 				handleLogin,
 				handleLogout,
 				handleRegister,

@@ -1,5 +1,6 @@
 const express = require("express");
 const User = require("../models/user.model");
+const OAuth2Client = require("google-auth-library").OAuth2Client;
 const router = express.Router();
 const { createJSONToken } = require("../util/auth");
 
@@ -35,6 +36,29 @@ router.post("/login", async (req, res) => {
 			return res.status(400).json({ error: "Invalid username or password" });
 		}
 		const authToken = createJSONToken(user.username, user.role);
+		res.json({ authToken, user });
+	} catch (err) {
+		res.status(400).json({ error: err.message });
+	}
+});
+
+router.post("/google", async (req, res) => {
+	try {
+		const { token } = req.body;
+
+		const { GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET } = process.env;
+		const client = new OAuth2Client(GOOGLE_CLIENT_ID, GOOGLE_CLIENT_SECRET);
+
+		const tokenInfo = await client.verifyIdToken({ idToken: token, audience: GOOGLE_CLIENT_ID });
+		const profile = tokenInfo.getPayload();
+		if (!profile) throw { msg: "UNAUTHORIZED" };
+
+		let user = await User.findOne({ username: profile.email });
+		if (!user) {
+			user = new User({ profile, username: profile.email }).save();
+		}
+
+		const authToken = createJSONToken(profile.email, "User");
 		res.json({ authToken, user });
 	} catch (err) {
 		res.status(400).json({ error: err.message });
